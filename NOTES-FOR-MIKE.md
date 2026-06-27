@@ -2,19 +2,15 @@
 
 ## What I did
 - Analysed **github.com/zarazhangrui** (Zara Zhang, "AI tinkerer", 10k followers). Her profile is a single hand-written `README.md` in a special `zarazhangrui/zarazhangrui` repo. No widgets, no stats badges in the markdown, just a tight bio, a social row, and emoji-led project lists grouped into themed sections. Each line follows: `emoji [**repo**](link) (N stars) - one-line description`.
-- Rebuilt it as **`mikelitman/mikelitman`** with all your own info. The file is committed locally at `~/mikelitman-profile/README.md`, ready to push. **It is NOT live yet.** I stopped short of publishing to your public profile so you can read the copy first.
+- Rebuilt it as **`mikelitman/mikelitman`** with all your own info. **It is now LIVE** at https://github.com/mikelitman (published 28 June 2026). Source is committed at `~/mikelitman-profile/README.md`.
 
 ## The key adaptation (why it's not a 1:1 clone)
 Zara's currency is **GitHub stars** (23k on one repo). Your public repos have 0 stars and your real work lives as **deployed products**, not starred repos. Your CLAUDE.md also bans fabricated counts. So I swapped her "(23.3k stars)" device for **real metrics pulled live from each site**: "(140+ sources)", "(1,200+ brands)", "(10,000+ calls)". Same visual rhythm, all true. I verified all 8 project URLs return HTTP 200 and lifted every description from the sites' own meta tags.
 
 The bio mirrors her hook almost exactly because it genuinely fits you: she's "no traditional engineering background, but coding agents let me ship." That's your story too. 15+ years in comms and strategy, now shipping 20+ products with Claude Code.
 
-## To publish (one block, review first, then run)
-```bash
-cd ~/mikelitman-profile
-gh repo create mikelitman/mikelitman --public --source=. --remote=origin --push
-```
-GitHub auto-renders the README at the top of your profile. To undo: `gh repo delete mikelitman/mikelitman --yes` removes it from your profile instantly.
+## Status: published
+Live at https://github.com/mikelitman. To edit: change `~/mikelitman-profile/README.md`, then `git -C ~/mikelitman-profile commit -am "edit" && git -C ~/mikelitman-profile push`. To remove entirely: `gh repo delete mikelitman/mikelitman --yes`.
 
 ## Recommendations & suggestions
 
