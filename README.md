@@ -16,7 +16,9 @@ The ones people actually use.
 
 📞 [**Buggy Smart**](https://buggysmart.app) (10,000+ calls) - An AI voice agent that phoned 1,000+ London venues to ask one question: can a pushchair get through the door? Free interactive map, no ads, just real phone calls
 
-🚇 [**First Out**](https://firstout.app) (383 stations) - The fastest way off the tube. Know exactly where to stand for the quickest exit across Tube, DLR, Elizabeth line and Overground, with door-side indicators and Parent Mode
+🍽️ [**First Order**](https://first-order-london.netlify.app) (voice agent) - An AI voice agent that called hundreds of London restaurants to ask one thing: what should I order? Real dishes, straight from the kitchen
+
+🔖 [**Trove**](https://www.yourtrove.app) (taste engine) - The Pocket alternative that actually does something. Save links, get a weekly briefing, discover your taste archetypes and search by meaning
 
 ⌚ [**EVERYWEAR**](https://everywear.media) (daily scored) - The only wearable-technology intelligence platform sitting at the intersection of fashion, culture and technology. No advertisers, no affiliate links, the WTI score is not for sale
 
@@ -40,13 +42,27 @@ Scoring what culture feels but can't usually measure.
 
 ---
 
-## 🛠️ Tools & utilities
+## 📞 AI voice agents
 
-AI agents and apps that solve a real, everyday problem.
+Agents that pick up the phone and gather data nobody else collects.
 
-📞 [**Buggy Smart**](https://buggysmart.app) (1,000+ venues) - An AI voice agent that called London venues to check buggy access, mapped across 24 boroughs
+📞 [**Buggy Smart**](https://buggysmart.app) (1,000+ venues) - Called London venues to check pushchair access, mapped across 24 boroughs
+
+🍽️ [**First Order**](https://first-order-london.netlify.app) (hundreds of calls) - Called London restaurants to find the one dish you have to order, straight from the kitchen
+
+⏱️ [**Queue Index**](https://thequeueindex.com) (top 50) - Every Saturday at 1pm, calls London's top 50 restaurants to ask how long the wait is
+
+---
+
+## 🛠️ Apps & tools
+
+Useful, opinionated apps that solve a real, everyday problem.
 
 🚇 [**First Out**](https://firstout.app) (383 stations) - Where to stand on the platform for the quickest exit across London's rail network
+
+🔖 [**Trove**](https://www.yourtrove.app) (taste engine) - The Pocket alternative that actually does something: save links, weekly briefing, taste archetypes, search by meaning
+
+👶 [**Little London**](https://littlelondonco.com) (160+ activities) - 160+ hand-checked weekend activities for families with young kids in London, updated daily
 
 🎨 [**Modern Retro**](https://modernretro.art) (100 brands) - Modern brands reimagined as 1970s storefronts, an AI-generated visual gallery
 
