@@ -4,6 +4,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 🌐 [Portfolio](https://mikelitman.me) · ✍️ [Newsletter](https://mikelitman.me/newsletter/) · 💼 [LinkedIn](https://linkedin.com/in/michaellitman) · 📖 [Book](https://www.amazon.co.uk/Getting-Started-web3-NFTs-introduction/dp/178017649X) · 📊 [Insights](https://mikelitman.me/insights)
 
+> 💬 **Open to fractional & advisory work.** I help companies work out what AI actually changes for their creative and cultural business. Not decks, the real products and systems. [Say hello](mailto:hello@mikelitman.me).
+
 ---
 
 ## ⭐ Featured projects
