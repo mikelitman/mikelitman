@@ -2,7 +2,7 @@
 
 I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (Google, Nike, Netflix, Meta, Gucci), I now ship AI-native products across image, video, voice and language without writing a line of code myself. Coding agents turned 20+ ideas into live products in under a year. Taste is the differentiator. I build between 9pm and midnight.
 
-🌐 [Portfolio](https://mikelitman.me) · 📊 [Insights](https://mikelitman.me/insights) · 💼 [LinkedIn](https://linkedin.com/in/michaellitman) · 📖 Author of *Getting Started with Web3 & NFTs* (BCS, 2024)
+🌐 [Portfolio](https://mikelitman.me) · ✍️ [Newsletter](https://mikelitman.me/newsletter/) · 💼 [LinkedIn](https://linkedin.com/in/michaellitman) · 📖 [Book](https://www.amazon.co.uk/Getting-Started-web3-NFTs-introduction/dp/178017649X) · 📊 [Insights](https://mikelitman.me/insights)
 
 ---
 
