@@ -6,6 +6,10 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 > 💬 **Open to fractional & advisory work.** I help companies work out what AI actually changes for their creative and cultural business. Not decks, the real products and systems. [Say hello](mailto:hello@mikelitman.me).
 
+<!-- PATTERN:START -->
+📰 **From The Pattern** · 27 June 2026: *Brands are hiring craftspeople to fix what marketing broke.* → [read today's brief](https://thepattern.media)
+<!-- PATTERN:END -->
+
 ---
 
 ## ⭐ Featured projects
