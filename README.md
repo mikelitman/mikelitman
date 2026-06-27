@@ -1,8 +1,8 @@
 # Hi, I'm Mike 👋
 
-I build opinionated products at the intersection of culture, technology and taste. I spent 15+ years in strategy and tech communications, not engineering, but with coding agents I've shipped 20+ live AI-native products in under a year. Builder's mindset: ship the product first, tell the story second.
+I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (Google, Nike, Netflix, Meta, Gucci), I now ship AI-native products across image, video, voice and language without writing a line of code myself. Coding agents turned 20+ ideas into live products in under a year. Taste is the differentiator. I build between 9pm and midnight.
 
-🌐 [Portfolio](https://mikelitman.me) · 💼 [LinkedIn](https://linkedin.com/in/michaellitman) · 📖 Author of *Getting Started with Web3 & NFTs* (BCS, 2024)
+🌐 [Portfolio](https://mikelitman.me) · 📊 [Insights](https://mikelitman.me/insights) · 💼 [LinkedIn](https://linkedin.com/in/michaellitman) · 📖 Author of *Getting Started with Web3 & NFTs* (BCS, 2024)
 
 ---
 
@@ -54,6 +54,6 @@ AI agents and apps that solve a real, everyday problem.
 
 ## 🧰 How I build
 
-Strategy brain, builder's hands. Most of this is shipped with **Claude Code** plus a stack of generative tools (Runway, Stable Diffusion, Midjourney) wired into repeatable production pipelines. I don't write decks about what AI could do, I ship the thing and let it run.
+Strategy brain, builder's hands. Most of this is shipped with **Claude Code** plus a stack of generative tools (Runway, Stable Diffusion, Midjourney) wired into repeatable production pipelines. I don't write decks about what AI could do, I ship the thing and let it run. The full operational report, 238 posts, 28 live sites, 2,900+ commits in 90 days, lives on my [Insights page](https://mikelitman.me/insights).
 
-📍 London, UK · 🏆 BIMA 100 Tech Pioneer · ✍️ Featured in AdAge & WSJ
+📍 London · 🧠 Fractional Head of AI · 🏆 BIMA 100 Tech Pioneer · ✍️ Featured in AdAge & WSJ
