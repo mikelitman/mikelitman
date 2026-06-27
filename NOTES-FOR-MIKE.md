@@ -35,6 +35,25 @@ Live at https://github.com/mikelitman. To edit: change `~/mikelitman-profile/REA
 7. This profile reframes you from "marketer who dabbles" to "builder with a portfolio", which is strong for the portfolio-career goal in your CV. The metrics-in-parentheses do a lot of work: keep them updated as the numbers grow.
 8. Consider a thin top-line CTA like Zara's language toggle. Yours could be a single line linking to your "what I'm looking for" page, since recruiters land here.
 
+## Polish pass (done 28 June 2026)
+
+**#7 Stats widget: DONE (skipped, as recommended).** No widget added. Your story is shipped products, not commit volume.
+
+**#6 Pin repos: BLOCKED by GitHub, manual step for you.** I verified GitHub has *no* API to pin repos (it's a [requested-but-unimplemented feature](https://github.com/orgs/community/discussions/184845)); pinning is web-UI only. I did NOT make any private repos public on your behalf, that's your call since it exposes source.
+- I tidied the profile repo so it's pin-ready: added description ("My GitHub profile README") and homepage (mikelitman.me).
+- Your 4 pinnable public repos: `mikelitman` (this profile), `thepattern-audio`, `optimists-operating-system`, `elevenlabs-phone-agent`. `marketingskills` is a fork. None are strong showcases.
+- To pin (or to publish a flagship first): go to github.com/mikelitman then "Customize your pins", or make a private project public via its repo Settings then General then Change visibility, then pin it.
+
+**#8 Profile fields: PARTLY DONE.**
+- `location`: already "London", `blog`: already mikelitman.me. Both fine.
+- `bio`: I tried to update it (to fix the "4 live AI voice agents" clash) but your `gh` token lacks the `user` OAuth scope, so the API rejected it (HTTP 404, needs "user" scope). Two ways to fix:
+  - **Web UI (easiest):** Settings then Profile then Bio. Paste: `Non-coder who builds · 20+ live AI products · Making tech companies understood · $3.2M from 0 at MediaMonks · BIMA 100 · Published author` (142 chars, under the 160 limit).
+  - **CLI:** `gh auth refresh -h github.com -s user` (interactive), then:
+    ```bash
+    gh api -X PATCH /user -f bio="Non-coder who builds · 20+ live AI products · Making tech companies understood · \$3.2M from 0 at MediaMonks · BIMA 100 · Published author" -f location="London, UK"
+    ```
+  - Old bio (in case you want to revert): `Builder & Tech Comms · 4 live AI voice agents · Making tech companies understood · $3.2M from 0 at MediaMonks · BIMA 100 Tech Pioneer · Published Author`
+
 ## Files
 - `~/mikelitman-profile/README.md` is the profile (committed)
 - `~/mikelitman-profile/NOTES-FOR-MIKE.md` is this file
