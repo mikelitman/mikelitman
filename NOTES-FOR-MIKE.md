@@ -54,6 +54,15 @@ Live at https://github.com/mikelitman. To edit: change `~/mikelitman-profile/REA
     ```
   - Old bio (in case you want to revert): `Builder & Tech Comms · 4 live AI voice agents · Making tech companies understood · $3.2M from 0 at MediaMonks · BIMA 100 Tech Pioneer · Published Author`
 
+## Beyond 10: self-updating profile (28 June 2026)
+Zara's profile is static. Yours now updates itself, which fits your "27 automation skills / 10 scheduled agents" brand.
+- **What it does**: a live `📰 From The Pattern` block under your intro pulls the latest dated brief + headline straight from thepattern.media, so your GitHub profile shows today's culture insight without you touching it.
+- **How**: `scripts/update-readme.mjs` (no dependencies, plain Node fetch) rewrites the content between `<!-- PATTERN:START -->` / `<!-- PATTERN:END -->`. Driven by `.github/workflows/update-readme.yml` on a daily 06:00 UTC cron plus manual `workflow_dispatch`. Uses the built-in `GITHUB_TOKEN` (contents: write), so it needs none of your personal scopes.
+- **Safety**: if the source is unreachable the script exits cleanly and leaves the README untouched, so a flaky fetch can never break your profile.
+- **Verified**: ran locally (updated the block) and triggered the Action in CI, completed green (run 28305586671). Workflow id 303373036, status active.
+- **To extend**: the same marker pattern can self-heal your project metrics (e.g. CultureTerminal's "140+ sources") or add a "latest shipped" line. Say the word.
+- **To disable**: delete `.github/workflows/update-readme.yml`.
+
 ## Files
 - `~/mikelitman-profile/README.md` is the profile (committed)
 - `~/mikelitman-profile/NOTES-FOR-MIKE.md` is this file
