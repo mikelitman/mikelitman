@@ -79,6 +79,14 @@ Deliberately NOT done: an SVG data-card version, because GitHub's image proxy (c
 - **"Building this week"** human note near the top for momentum and personality.
 - **Currently-shipping line** driven by your latest public commit across repos.
 
+## All three "ladder" features shipped (28 June 2026)
+Feasibility checked first (evidence in session), then built. All in markdown (instant updates, no camo image-cache lag).
+1. **Live data card** ("Today's culture signal"): pulls from `thepattern.media/feed.xml`, which carries a real daily **Culture Pulse score** (74/100), the headline, the insight, and the edition link. NOTE: the CultureTerminal route was a dead end (its signal is Supabase/JS-rendered, empty in raw HTML), but The Pattern feed is richer anyway.
+2. **Latest writing**: top 3 posts from `mikelitman.me/feed.xml` (226 valid items), slugs humanized (AI/X/GitHub/MRA capitalized), sorted by date, with dates. Auto-refreshed daily.
+3. **Building this week**: a human note near the top. The daily Action deliberately does NOT touch it (no markers), so your edits always survive. Seeded with a true, sourced line; edit it freely.
+- One bug found and fixed mid-build: the signal insight leaked the "Read the full edition: URL" text and broke the blockquote, because a `.*$` regex can't cross the newline in the feed. Switched to split-on-attribution + whitespace-collapse.
+- Verified green in CI (run 28319780034): all four refreshers ran, live README shows the signal card, writing feed, and building note.
+
 ## Files
 - `~/mikelitman-profile/README.md` is the profile (committed)
 - `~/mikelitman-profile/NOTES-FOR-MIKE.md` is this file
