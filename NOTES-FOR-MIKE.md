@@ -68,6 +68,17 @@ Zara's profile is static. Yours now updates itself, which fits your "27 automati
 - **Self-healing project metrics**: the daily Action now also refreshes the `(140+ sources)` / `(1,200+ brands)` / `(111 brands)` / `(160+ activities)` tags straight from each live site's meta, so those numbers can never go stale. Verified running green in CI (run 28317980850): it refreshed the Pattern brief to today's ("Furniture tourism just became the new design education.") and re-confirmed all four metrics.
 - **Skipped on purpose**: a live "by the numbers" line from your Insights page (238 posts / 28 sites / 2,900+ commits). The raw HTML has dozens of per-repo commit counts and the post total is JS-rendered, so auto-scraping risked injecting a wrong number. That would breach the no-fabrication rule, so the How-I-build line stays static.
 
+## 11/10: visible self-maintenance (28 June 2026)
+The self-updating loop was invisible. Now it's the punchline: a footer the Action stamps every morning reads *"This profile maintains itself... Built and run by an agent. That's the whole point. · Last refresh: <date>"*. It turns your automation into live proof of your "non-coder who builds with agents" thesis, which is the screenshot-worthy bit. Verified: stamp logic ran green in CI (run 28318083941), live README shows "Last refresh: 28 June 2026". The date auto-advances each morning.
+
+Deliberately NOT done: an SVG data-card version, because GitHub's image proxy (camo) caches images and would make a daily-changing SVG lag by hours. Markdown updates instantly, so the live bits stay genuinely live.
+
+### The 11/10 ladder (what would push it further, your pick)
+- **Live data card** from your own products (today's top culture signal) as a daily-regenerated visual. Biggest "how did they do that", but needs a scrape-feasibility check and has the camo cache caveat.
+- **Latest-writing feed** auto-pulled from The Pattern / Insights (needs an RSS/JSON feed to exist).
+- **"Building this week"** human note near the top for momentum and personality.
+- **Currently-shipping line** driven by your latest public commit across repos.
+
 ## Files
 - `~/mikelitman-profile/README.md` is the profile (committed)
 - `~/mikelitman-profile/NOTES-FOR-MIKE.md` is this file
