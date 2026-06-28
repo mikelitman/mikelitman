@@ -89,9 +89,31 @@ async function refreshMetrics(content) {
   return content;
 }
 
+function refreshStamp(content) {
+  const start = '<!-- STAMP:START -->';
+  const end = '<!-- STAMP:END -->';
+  const re = new RegExp(`${start}[\\s\\S]*?${end}`);
+  if (!re.test(content)) {
+    console.error('Stamp skipped: markers missing');
+    return content;
+  }
+  const today = new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+  const line =
+    `🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief ` +
+    `from The Pattern and refreshes each project's numbers, then commits the change. ` +
+    `Built and run by an agent. That's the whole point.* · **Last refresh: ${today}**`;
+  console.log(`Stamp: Last refresh ${today}`);
+  return content.replace(re, `${start}\n${line}\n${end}`);
+}
+
 const before = await readFile(README, 'utf8');
 let after = await refreshPattern(before);
 after = await refreshMetrics(after);
+after = refreshStamp(after);
 
 if (after === before) {
   console.log('No change.');

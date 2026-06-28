@@ -81,3 +81,9 @@ Useful, opinionated apps that solve a real, everyday problem.
 Strategy brain, builder's hands. Most of this is shipped with **Claude Code** plus a stack of generative tools (Runway, Stable Diffusion, Midjourney) wired into repeatable production pipelines. I don't write decks about what AI could do, I ship the thing and let it run. The full operational report, 238 posts, 28 live sites, 2,900+ commits in 90 days, lives on my [Insights page](https://mikelitman.me/insights).
 
 📍 London · 🧠 Fractional Head of AI · 🏆 BIMA 100 Tech Pioneer · ✍️ Featured in AdAge & WSJ
+
+---
+
+<!-- STAMP:START -->
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern and refreshes each project's numbers, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 June 2026**
+<!-- STAMP:END -->
