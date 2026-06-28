@@ -1,18 +1,17 @@
-// Refreshes the live sections of README.md:
-//   1) the "From The Pattern" block (latest dated brief + headline)
-//   2) self-healing project metric tags, e.g. (140+ sources)
-// Each source is fetched independently and wrapped in try/catch, so one
-// unreachable site never breaks the others or the README.
+// Refreshes the live sections of README.md from Mike's own products:
+//   1) PATTERN  - "Today's culture signal" card from thepattern.media/feed.xml
+//   2) METRICS  - self-healing project number tags, e.g. (140+ sources)
+//   3) WRITING  - latest blog posts from mikelitman.me/feed.xml
+//   4) STAMP    - "last refresh" self-maintenance line
+// The "Building this week" line is intentionally NOT touched here so Mike's
+// own edits to it always survive. Every fetch is wrapped in try/catch, so one
+// unreachable source never breaks the others or the README.
 
 import { readFile, writeFile } from 'node:fs/promises';
 
-const SOURCE = 'https://thepattern.media';
 const README = new URL('../README.md', import.meta.url);
-const START = '<!-- PATTERN:START -->';
-const END = '<!-- PATTERN:END -->';
 const UA = { headers: { 'user-agent': 'mikelitman-profile-bot' } };
 
-// Project metric tags that should track the live number on each site.
 const METRICS = [
   { url: 'https://cultureterminal.com', re: /(\d[\d,]*\+?\s*sources)/i },
   { url: 'https://therelevanceindex.com', re: /(\d[\d,]*\+?\s*brands)/i },
@@ -20,50 +19,100 @@ const METRICS = [
   { url: 'https://littlelondonco.com', re: /(\d[\d,]*\+?\s*activities)/i },
 ];
 
+const ACRONYMS = {
+  ai: 'AI', x: 'X', nft: 'NFT', nfts: 'NFTs', ui: 'UI', ux: 'UX', api: 'API',
+  llm: 'LLM', og: 'OG', seo: 'SEO', cro: 'CRO', mra: 'MRA', gw: 'GW',
+  github: 'GitHub', ios: 'iOS', b2b: 'B2B', b2c: 'B2C',
+};
+
 function decode(s) {
   return s
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&#0?39;/g, "'")
-    .replace(/&rsquo;|&lsquo;/g, "'")
-    .replace(/&ldquo;|&rdquo;/g, '"')
-    .replace(/&nbsp;/g, ' ')
+    .replace(/<!\[CDATA\[|\]\]>/g, '')
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;|&rsquo;|&lsquo;/g, "'")
+    .replace(/&ldquo;|&rdquo;/g, '"').replace(/&nbsp;/g, ' ')
     .trim();
 }
+const pick = (s, re) => { const m = s.match(re); return m ? decode(m[1]) : null; };
+const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-function pick(html, re) {
-  const m = html.match(re);
-  return m ? decode(m[1]) : null;
+function replaceBlock(content, name, inner) {
+  const start = `<!-- ${name}:START -->`;
+  const end = `<!-- ${name}:END -->`;
+  const re = new RegExp(`${start}[\\s\\S]*?${end}`);
+  if (!re.test(content)) throw new Error(`${name} markers missing`);
+  return content.replace(re, `${start}\n${inner}\n${end}`);
 }
 
-function esc(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+function humanize(slug) {
+  const words = slug.split('-').map((w) => ACRONYMS[w.toLowerCase()] || w);
+  const s = words.join(' ');
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+function fmt(pubDate, opts) {
+  return new Date(pubDate).toLocaleDateString('en-GB', opts);
 }
 
 async function refreshPattern(content) {
   try {
-    const res = await fetch(SOURCE, UA);
+    const res = await fetch('https://thepattern.media/feed.xml', UA);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
+    const xml = await res.text();
+    const item = pick(xml, /<item>([\s\S]*?)<\/item>/i);
+    if (!item) throw new Error('no item');
+    const title = pick(item, /<title>([\s\S]*?)<\/title>/i) || '';
+    const desc = pick(item, /<description>([\s\S]*?)<\/description>/i) || '';
+    const pubDate = pick(item, /<pubDate>([\s\S]*?)<\/pubDate>/i);
 
-    const title = pick(html, /<title>([^<]*)<\/title>/i) || '';
-    const dateMatch = title.match(/(\d{1,2}\s+\w+\s+\d{4})/);
-    const date = dateMatch ? dateMatch[1] : null;
-    const headline =
-      pick(html, /<meta[^>]+property="og:description"[^>]*content="([^"]*)"/i) ||
-      pick(html, /<meta[^>]+name="description"[^>]*content="([^"]*)"/i);
-    if (!headline) throw new Error('no headline');
+    const edition = (title.match(/No\.\s*(\d+)/) || [])[1];
+    const headline = decode(title.replace(/^No\.\s*\d+:\s*/, ''));
+    const pulse = (desc.match(/Culture Pulse:\s*(\d+)/i) || [])[1];
+    const editionUrl =
+      (desc.match(/(https:\/\/thepattern\.media\/editions\/[^\s]+)/) || [])[1] ||
+      'https://thepattern.media';
+    const insight = decode(
+      desc.replace(/Culture Pulse:\s*\d+\.\s*/i, '')
+        .split(/\s*The Pattern,/i)[0]
+        .split(/\s*Read the full edition/i)[0]
+    ).replace(/\s+/g, ' ').trim();
+    const date = pubDate ? fmt(pubDate, { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 
-    const line = date
-      ? `📰 **From The Pattern** · ${date}: *${headline}* → [read today's brief](${SOURCE})`
-      : `📰 **From The Pattern**: *${headline}* → [read today's brief](${SOURCE})`;
-
-    const re = new RegExp(`${START}[\\s\\S]*?${END}`);
-    if (!re.test(content)) throw new Error('markers missing');
-    console.log(`Pattern: ${line}`);
-    return content.replace(re, `${START}\n${line}\n${END}`);
+    const inner =
+      `> 📡 **Today's culture signal** · Pulse ${pulse || '?'}/100\n` +
+      `> *${headline}* ${insight}\n` +
+      `> → [The Pattern, No. ${edition || ''} · ${date}](${editionUrl})`;
+    console.log(`Pattern: No.${edition} Pulse ${pulse}`);
+    return replaceBlock(content, 'PATTERN', inner);
   } catch (err) {
     console.error(`Pattern skipped: ${err.message}`);
+    return content;
+  }
+}
+
+async function refreshWriting(content) {
+  try {
+    const res = await fetch('https://mikelitman.me/feed.xml', UA);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const xml = await res.text();
+    const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map((m) => {
+      const b = m[1];
+      return {
+        title: pick(b, /<title>([\s\S]*?)<\/title>/i) || '',
+        link: pick(b, /<link>([\s\S]*?)<\/link>/i) || '',
+        date: pick(b, /<pubDate>([\s\S]*?)<\/pubDate>/i) || '',
+      };
+    }).filter((i) => i.title && i.link && i.date);
+    if (!items.length) throw new Error('no items');
+
+    items.sort((a, b) => new Date(b.date) - new Date(a.date));
+    const top = items.slice(0, 3).map((i) =>
+      `- [${humanize(i.title)}](${i.link}) · ${fmt(i.date, { day: 'numeric', month: 'short', year: 'numeric' })}`
+    );
+    console.log(`Writing: ${items.length} posts, top "${humanize(items[0].title)}"`);
+    return replaceBlock(content, 'WRITING', top.join('\n'));
+  } catch (err) {
+    console.error(`Writing skipped: ${err.message}`);
     return content;
   }
 }
@@ -77,7 +126,6 @@ async function refreshMetrics(content) {
       const metas = html.match(/<meta[^>]+content="[^"]*"/gi)?.join(' ') || '';
       const metric = pick(metas, re);
       if (!metric) throw new Error('metric not found');
-
       const tagRe = new RegExp(`(\\]\\(${esc(url)}\\) )\\([^)]*\\)`, 'g');
       if (!tagRe.test(content)) throw new Error('link tag not in README');
       content = content.replace(tagRe, `$1(${metric})`);
@@ -90,28 +138,23 @@ async function refreshMetrics(content) {
 }
 
 function refreshStamp(content) {
-  const start = '<!-- STAMP:START -->';
-  const end = '<!-- STAMP:END -->';
-  const re = new RegExp(`${start}[\\s\\S]*?${end}`);
-  if (!re.test(content)) {
-    console.error('Stamp skipped: markers missing');
+  try {
+    const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    const line =
+      `🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief ` +
+      `from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits ` +
+      `the change. Built and run by an agent. That's the whole point.* · **Last refresh: ${today}**`;
+    console.log(`Stamp: ${today}`);
+    return replaceBlock(content, 'STAMP', line);
+  } catch (err) {
+    console.error(`Stamp skipped: ${err.message}`);
     return content;
   }
-  const today = new Date().toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
-  const line =
-    `🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief ` +
-    `from The Pattern and refreshes each project's numbers, then commits the change. ` +
-    `Built and run by an agent. That's the whole point.* · **Last refresh: ${today}**`;
-  console.log(`Stamp: Last refresh ${today}`);
-  return content.replace(re, `${start}\n${line}\n${end}`);
 }
 
 const before = await readFile(README, 'utf8');
 let after = await refreshPattern(before);
+after = await refreshWriting(after);
 after = await refreshMetrics(after);
 after = refreshStamp(after);
 

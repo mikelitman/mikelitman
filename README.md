@@ -8,8 +8,13 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 > 💬 **Open to fractional & advisory work.** I help companies work out what AI actually changes for their creative and cultural business. Not decks, the real products and systems. [Say hello](mailto:hello@mikelitman.me).
 
+<!-- Edit this "Building this week" line freely; the daily Action never overwrites it. -->
+🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
+
 <!-- PATTERN:START -->
-📰 **From The Pattern** · 28 June 2026: *Furniture tourism just became the new design education.* → [read today's brief](https://thepattern.media)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Furniture tourism just became the new design education.* Singaporeans are flying to Chinese factories with floor plans instead of buying from showrooms. The consumer just built a better supply chain.
+> → [The Pattern, No. 124 · 28 June 2026](https://thepattern.media/editions/2026-06-28.html)
 <!-- PATTERN:END -->
 
 ---
@@ -76,6 +81,18 @@ Useful, opinionated apps that solve a real, everyday problem.
 
 ---
 
+## ✍️ Latest writing
+
+<!-- WRITING:START -->
+- [AI collapsed the creative conveyor belt](https://mikelitman.me/blog/ai-collapsed-the-creative-conveyor-belt.html) · 13 Jun 2026
+- [AI agents in production opening night](https://mikelitman.me/blog/ai-agents-in-production-opening-night.html) · 12 Jun 2026
+- [How to write X articles people save](https://mikelitman.me/blog/how-to-write-x-articles-people-save.html) · 31 May 2026
+<!-- WRITING:END -->
+
+→ [more on the blog](https://mikelitman.me/blog/)
+
+---
+
 ## 🧰 How I build
 
 Strategy brain, builder's hands. Most of this is shipped with **Claude Code** plus a stack of generative tools (Runway, Stable Diffusion, Midjourney) wired into repeatable production pipelines. I don't write decks about what AI could do, I ship the thing and let it run. The full operational report, 238 posts, 28 live sites, 2,900+ commits in 90 days, lives on my [Insights page](https://mikelitman.me/insights).
@@ -85,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern and refreshes each project's numbers, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 June 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 June 2026**
 <!-- STAMP:END -->
