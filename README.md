@@ -1,3 +1,5 @@
+![Mike Litman, non-coder who builds](assets/header.svg)
+
 # Hi, I'm Mike 👋
 
 I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (Google, Nike, Netflix, Meta, Gucci), I now ship AI-native products across image, video, voice and language without writing a line of code myself. Coding agents turned 20+ ideas into live products in under a year. Taste is the differentiator. I build between 9pm and midnight.
@@ -7,7 +9,7 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 > 💬 **Open to fractional & advisory work.** I help companies work out what AI actually changes for their creative and cultural business. Not decks, the real products and systems. [Say hello](mailto:hello@mikelitman.me).
 
 <!-- PATTERN:START -->
-📰 **From The Pattern** · 27 June 2026: *Brands are hiring craftspeople to fix what marketing broke.* → [read today's brief](https://thepattern.media)
+📰 **From The Pattern** · 28 June 2026: *Furniture tourism just became the new design education.* → [read today's brief](https://thepattern.media)
 <!-- PATTERN:END -->
 
 ---
