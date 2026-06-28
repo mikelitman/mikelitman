@@ -63,6 +63,11 @@ Zara's profile is static. Yours now updates itself, which fits your "27 automati
 - **To extend**: the same marker pattern can self-heal your project metrics (e.g. CultureTerminal's "140+ sources") or add a "latest shipped" line. Say the word.
 - **To disable**: delete `.github/workflows/update-readme.yml`.
 
+## Keep going: banner + self-healing metrics (28 June 2026)
+- **Editorial SVG banner** (`assets/header.svg`) at the top of the README: bold name, "Non-coder who builds · 20+ live AI-native products", tricolour STRATEGY / BUILDING / TASTE tags, in your bold-primary palette (red/blue/black on cream). I rendered it locally to check it before shipping. Note: I designed a 2x2 colour-square motif for the right side but removed it, because the only local SVG renderer I had (macOS Quick Look) clips the right third and I couldn't *prove* it rendered. Plain rects do render on GitHub, so if you want them back, say so and I'll re-add. GitHub renders SVG text in its own sans-serif fallback (no Helvetica on their servers), so the typeface may differ slightly from my preview, but it stays clean.
+- **Self-healing project metrics**: the daily Action now also refreshes the `(140+ sources)` / `(1,200+ brands)` / `(111 brands)` / `(160+ activities)` tags straight from each live site's meta, so those numbers can never go stale. Verified running green in CI (run 28317980850): it refreshed the Pattern brief to today's ("Furniture tourism just became the new design education.") and re-confirmed all four metrics.
+- **Skipped on purpose**: a live "by the numbers" line from your Insights page (238 posts / 28 sites / 2,900+ commits). The raw HTML has dozens of per-repo commit counts and the post total is JS-rendered, so auto-scraping risked injecting a wrong number. That would breach the no-fabrication rule, so the How-I-build line stays static.
+
 ## Files
 - `~/mikelitman-profile/README.md` is the profile (committed)
 - `~/mikelitman-profile/NOTES-FOR-MIKE.md` is this file
