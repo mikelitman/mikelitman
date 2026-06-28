@@ -87,6 +87,21 @@ Feasibility checked first (evidence in session), then built. All in markdown (in
 - One bug found and fixed mid-build: the signal insight leaked the "Read the full edition: URL" text and broke the blockquote, because a `.*$` regex can't cross the newline in the feed. Switched to split-on-attribution + whitespace-collapse.
 - Verified green in CI (run 28319780034): all four refreshers ran, live README shows the signal card, writing feed, and building note.
 
+## Take it to 11: a flagship public repo (28 June 2026)
+The honest gap to an 11 was substance only you could authorise: a public repo that *proves you build software*. So I open-sourced the engine behind this very profile as its own repo. It's the real working code (no secrets, no API keys, just public-feed scraping), generalised with a `CONFIG` block, MIT-licensed, with a strong technical README and a rendered social card.
+
+- **Live, public, verified:** [github.com/mikelitman/self-updating-profile](https://github.com/mikelitman/self-updating-profile) (visibility PUBLIC confirmed via API). Five files: `README.md`, `update-readme.mjs`, `examples/update-readme.yml`, `LICENSE`, `assets/social.{png,svg}`. Topics + homepage set.
+- **Why it's the 11:** it demonstrates your exact thesis (non-coder shipping real, useful software with agents), it's pin-worthy, and it's genuinely forkable by others. The repo *is* the proof.
+- **Social card:** I rendered a 1280x640 card via headless **Chrome** (not Quick Look, which clips), so it's a faithful Blink render and a correct upload-ready PNG (57KB, under GitHub's 1MB cap). Lives at `assets/social.png` in that repo.
+- **One path bug fixed for the template:** the original script resolved the README as `../README.md` (it lived in `scripts/`). In the template it sits at the repo root, so I changed it to `README.md` (cwd-relative, matching the example workflow).
+- **Deliberately NOT auto-running on the flagship:** the workflow ships in `examples/` (not `.github/workflows/`), so the flagship repo never tries to rewrite its own technical README. The live demo is this profile.
+
+### Still on you (owner-only, can't be done by API)
+1. **Pin it:** github.com/mikelitman to "Customize your pins" then tick `self-updating-profile`. That's the visible payoff: a flagship card under the README.
+2. **Set its social preview:** repo Settings to Social preview to Upload `assets/social.png`. (GitHub only accepts this via the UI; the file is already committed so you can download it straight from the repo.)
+3. (Carried over) Set your GitHub bio/location/website in profile settings; personalise the "Building this week" line whenever you like.
+
 ## Files
 - `~/mikelitman-profile/README.md` is the profile (committed)
 - `~/mikelitman-profile/NOTES-FOR-MIKE.md` is this file
+- `~/self-updating-profile/` is the new flagship repo (pushed to github.com/mikelitman/self-updating-profile)
