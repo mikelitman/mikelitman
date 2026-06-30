@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Furniture tourism just became the new design education.* Singaporeans are flying to Chinese factories with floor plans instead of buying from showrooms. The consumer just built a better supply chain.
-> → [The Pattern, No. 124 · 28 June 2026](https://thepattern.media/editions/2026-06-28.html)
+> *Luxury is courting tech money by selling it the sea.* LVMH just built a yacht for tech billionaires. Old money is officially coming to new money, not the other way round. @ThePattern
+> → [The Pattern, No. 125 · 29 June 2026](https://thepattern.media/editions/2026-06-29.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 29 June 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 30 June 2026**
 <!-- STAMP:END -->
