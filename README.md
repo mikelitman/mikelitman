@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Archival brands are becoming design languages, not product categories.* A24 uses aesthetic identity as an AI filter. Gentle Monster edits Prada's logo. Song for the Mute collapses court vs trail. Point of view is now the only moat. @ThePattern
-> → [The Pattern, No. 126 · 30 June 2026](https://thepattern.media/editions/2026-06-30.html)
+> *Bodies are the new frontier. Brands are building for heat, not aspiration.* Today's Pattern: Rick Owens made a tracksuit that air-conditions you. UBTech priced a companion robot for consumers. The body is now the brief. @ThePattern
+> → [The Pattern, No. 127 · 1 July 2026](https://thepattern.media/editions/2026-07-01.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 1 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 2 July 2026**
 <!-- STAMP:END -->
