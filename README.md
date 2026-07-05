@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Craft is the new territory. Luxury is buying the supply chain.* Chanel buys France's oldest shirtmaker. LVMH opens its ateliers. Luxury is not just selling craft anymore — it is buying the source. @ThePattern
-> → [The Pattern, No. 129 · 3 July 2026](https://thepattern.media/editions/2026-07-03.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Tech platforms are becoming fashion houses. The category war just started.* Meta just declared itself a fashion house. That's not a tech story. It's a category takeover. Today's Pattern: platforms claimed the body. Every other category adjusts.
+> → [The Pattern, No. 130 · 4 July 2026](https://thepattern.media/editions/2026-07-04.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 4 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 5 July 2026**
 <!-- STAMP:END -->
