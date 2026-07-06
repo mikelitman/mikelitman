@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Tech platforms are becoming fashion houses. The category war just started.* Meta just declared itself a fashion house. That's not a tech story. It's a category takeover. Today's Pattern: platforms claimed the body. Every other category adjusts.
-> → [The Pattern, No. 130 · 4 July 2026](https://thepattern.media/editions/2026-07-04.html)
+> *Climate is the new creative brief. Fashion just made it structural.* When Rick Owens builds fans into a tracksuit, climate stops being a values statement and becomes a design category.
+> → [The Pattern, No. 131 · 5 July 2026](https://thepattern.media/editions/2026-07-05.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 5 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 July 2026**
 <!-- STAMP:END -->
