@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Climate is the new creative brief. Fashion just made it structural.* When Rick Owens builds fans into a tracksuit, climate stops being a values statement and becomes a design category.
-> → [The Pattern, No. 131 · 5 July 2026](https://thepattern.media/editions/2026-07-05.html)
+> 📡 **Today's culture signal** · Pulse 68/100
+> *Discount grocers found the fashion playbook. Luxury is watching.* When Aldi can run a credible fashion drop, scarcity is no longer a differentiator. Today's Pattern: the tools premium brands relied on are now free to use. #ThePattern
+> → [The Pattern, No. 132 · 6 July 2026](https://thepattern.media/editions/2026-07-06.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 7 July 2026**
 <!-- STAMP:END -->
