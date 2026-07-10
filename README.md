@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Publishers are moving to Netflix. The attention war just changed floors.* Publishers are moving to Netflix. Dior wins the Swift-Kelce wedding. Schiaparelli builds couture from latex. Distribution wants to own culture now. @ThePattern
-> → [The Pattern, No. 134 · 8 July 2026](https://thepattern.media/editions/2026-07-08.html)
+> *Couture just split in two. Piccioli chose the quieter half.* Piccioli strips Balenciaga back to craft. M&S enters Fashion Week. The spectacle era is closing. Today's Pattern: restraint is the new flex. #ThePattern
+> → [The Pattern, No. 135 · 9 July 2026](https://thepattern.media/editions/2026-07-09.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 9 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 10 July 2026**
 <!-- STAMP:END -->
