@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Platforms are becoming archives. The ownership question just got urgent.* Streamers want Letterboxd's taste graph. Chanel bought a shirtmaker. ASOS hit couture week. The pattern: scale is cheap now. Depth is the scarce asset. @ThePatt_ern
-> → [The Pattern, No. 137 · 11 July 2026](https://thepattern.media/editions/2026-07-11.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Agentic AI is creating jobs. The displacement story just reversed.* Software hiring is up 15% since Claude Code launched. The AI displacement story just reversed. Today's Pattern: active beats passive, across every category. #ThePattern
+> → [The Pattern, No. 138 · 12 July 2026](https://thepattern.media/editions/2026-07-12.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 12 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 July 2026**
 <!-- STAMP:END -->
