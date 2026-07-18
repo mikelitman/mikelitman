@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Retail distribution is the new brand signal. Salomon just proved it.* Salomon did flagship before Foot Locker on purpose. Distribution is back as a brand signal, not just a growth lever. Today's Pattern. #thepattern
-> → [The Pattern, No. 142 · 16 July 2026](https://thepattern.media/editions/2026-07-16.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Physical presence is the new proof of concept for digital brands.* Hundreds queued 12 hours in a NYC heatwave for SKYLRK. The pop-up is now the most credible proof of concept a brand can run. Physical presence is back. #ThePattern
+> → [The Pattern, No. 143 · 17 July 2026](https://thepattern.media/editions/2026-07-17.html)
 <!-- PATTERN:END -->
 
 ---
@@ -102,5 +102,5 @@ Strategy brain, builder's hands. Most of this is shipped with **Claude Code** pl
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 17 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 18 July 2026**
 <!-- STAMP:END -->
