@@ -97,6 +97,8 @@ Useful, opinionated apps that solve a real, everyday problem.
 
 Strategy brain, builder's hands. Most of this is shipped with **Claude Code** plus a stack of generative tools (Runway, Stable Diffusion, Midjourney) wired into repeatable production pipelines. I don't write decks about what AI could do, I ship the thing and let it run. The full operational report, 238 posts, 28 live sites, 2,900+ commits in 90 days, lives on my [Insights page](https://mikelitman.me/insights).
 
+I open-source the frameworks behind the work. The [**Taste OS** scoring spec](https://github.com/mikelitman/taste-os-spec), five dimensions and a zero-dependency scorer, is on GitHub for anyone to use, fork, and build on.
+
 📍 London · 🧠 Fractional Head of AI · 🏆 BIMA 100 Tech Pioneer · ✍️ Featured in AdAge & WSJ
 
 ---
