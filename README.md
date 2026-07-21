@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Hollywood bought AI infrastructure. The creative class notices.* Netflix bought a filmmaking AI tool for $587m. The streaming wars just became an infrastructure play. Today's Pattern: whoever owns the layer beneath the creative act controls what gets made.
-> → [The Pattern, No. 145 · 19 July 2026](https://thepattern.media/editions/2026-07-19.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Supply chains are the new brand strategy. Luxury just learned that publicly.* Supply chains are the new brand strategy. Nine luxury houses just learned that in public. Today's Pattern: transparency became compulsory and luxury forgot to prepare.
+> → [The Pattern, No. 146 · 20 July 2026](https://thepattern.media/editions/2026-07-20.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 20 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 21 July 2026**
 <!-- STAMP:END -->
