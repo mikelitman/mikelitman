@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Entertainment's format walls are falling. The platform that owns attention wins everything.* Format wars are over. The aggregation wars have begun. Whoever owns daily attention across all formats wins. Everything else is a distribution moat that's already gone. @ThePattern
-> → [The Pattern, No. 148 · 22 July 2026](https://thepattern.media/editions/2026-07-22.html)
+> *Decentralised music failed. Centralised platforms just bought its best parts.* Decentralised music failed. SoundCloud bought its community. Platforms don't disrupt the edge anymore — they wait and acquire it. #ThePattern
+> → [The Pattern, No. 149 · 23 July 2026](https://thepattern.media/editions/2026-07-23.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 23 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 24 July 2026**
 <!-- STAMP:END -->
