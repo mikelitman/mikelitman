@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Decentralised music failed. Centralised platforms just bought its best parts.* Decentralised music failed. SoundCloud bought its community. Platforms don't disrupt the edge anymore — they wait and acquire it. #ThePattern
-> → [The Pattern, No. 149 · 23 July 2026](https://thepattern.media/editions/2026-07-23.html)
+> *Place is doing the brand work that campaigns no longer can.* Dior chose Trinity College Dublin. Loro Piana chose the Menil Collection. MVRDV chose Beijing roof tiles. The venue is the new campaign. #ThePatt ern
+> → [The Pattern, No. 150 · 24 July 2026](https://thepattern.media/editions/2026-07-24.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 24 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 25 July 2026**
 <!-- STAMP:END -->
