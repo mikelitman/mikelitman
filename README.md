@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Place is doing the brand work that campaigns no longer can.* Dior chose Trinity College Dublin. Loro Piana chose the Menil Collection. MVRDV chose Beijing roof tiles. The venue is the new campaign. #ThePatt ern
-> → [The Pattern, No. 150 · 24 July 2026](https://thepattern.media/editions/2026-07-24.html)
+> *Tech is shedding bodies while culture keeps spending on them.* Tech cut 140K jobs in 2026. Culture responded by putting a 25-year ambassador on a pedestal. Automation scales. Human continuity compounds. @ThePattern
+> → [The Pattern, No. 151 · 25 July 2026](https://thepattern.media/editions/2026-07-25.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 25 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 26 July 2026**
 <!-- STAMP:END -->
