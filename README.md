@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Tech is shedding bodies while culture keeps spending on them.* Tech cut 140K jobs in 2026. Culture responded by putting a 25-year ambassador on a pedestal. Automation scales. Human continuity compounds. @ThePattern
-> → [The Pattern, No. 151 · 25 July 2026](https://thepattern.media/editions/2026-07-25.html)
+> 📡 **Today's culture signal** · Pulse 68/100
+> *Open source AI just became the culture war nobody saw coming.* OpenAI lobbies against open source while championing it publicly. Dior takes the runway to Dublin. Cyberpunk returns as prestige drama. The pattern: openness is becoming a liability. #ThePatter
+> → [The Pattern, No. 152 · 26 July 2026](https://thepattern.media/editions/2026-07-26.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 26 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 27 July 2026**
 <!-- STAMP:END -->
