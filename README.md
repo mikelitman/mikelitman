@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 68/100
-> *Open source AI just became the culture war nobody saw coming.* OpenAI lobbies against open source while championing it publicly. Dior takes the runway to Dublin. Cyberpunk returns as prestige drama. The pattern: openness is becoming a liability. #ThePatter
-> → [The Pattern, No. 152 · 26 July 2026](https://thepattern.media/editions/2026-07-26.html)
+> *Cheap wins the AI budget war. Premium loses the narrative.* Premium is losing to procurement. Thrift-maxxing, Primark's 29% cuts, Levi's DTC reframe: the same pressure from three directions.
+> → [The Pattern, No. 153 · 27 July 2026](https://thepattern.media/editions/2026-07-27.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 27 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 July 2026**
 <!-- STAMP:END -->
