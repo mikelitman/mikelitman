@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 68/100
-> *Cheap wins the AI budget war. Premium loses the narrative.* Premium is losing to procurement. Thrift-maxxing, Primark's 29% cuts, Levi's DTC reframe: the same pressure from three directions.
-> → [The Pattern, No. 153 · 27 July 2026](https://thepattern.media/editions/2026-07-27.html)
+> *Ordinary moments are the new brand strategy. Banking just proved it.* Monzo removed itself from its own ad campaign. Stüssy won by refusing to be Supreme. LVMH stabilised by going narrower. Today's pattern: subtraction beats addition. @ThePattern
+> → [The Pattern, No. 154 · 28 July 2026](https://thepattern.media/editions/2026-07-28.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 29 July 2026**
 <!-- STAMP:END -->
