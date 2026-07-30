@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 68/100
-> *Ordinary moments are the new brand strategy. Banking just proved it.* Monzo removed itself from its own ad campaign. Stüssy won by refusing to be Supreme. LVMH stabilised by going narrower. Today's pattern: subtraction beats addition. @ThePattern
-> → [The Pattern, No. 154 · 28 July 2026](https://thepattern.media/editions/2026-07-28.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Prestige institutions are now culture's fastest credential launchers.* The NPG just acquired a Brat-era photo while the era is still happening. Institutional validation is now a mid-chapter move, not a finale. @ThePattern
+> → [The Pattern, No. 155 · 29 July 2026](https://thepattern.media/editions/2026-07-29.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 29 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 30 July 2026**
 <!-- STAMP:END -->
