@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Legacy assets are being repackaged as experiences. Pophouse just showed how.* Legacy IP found a new business model. Iron Maiden selling to Pophouse isn't a nostalgia bet, it's an experience infrastructure play. The catalogue was always the floor. #ThePatter
-> → [The Pattern, No. 156 · 30 July 2026](https://thepattern.media/editions/2026-07-30.html)
+> *Luxury is meeting customers halfway. That admission is the strategy shift.* Luxury's pricing power is gone. The brands winning now are replacing margin with conviction — origin, craft, and cultural authority. Friday's Pattern: before it's obvious.
+> → [The Pattern, No. 157 · 31 July 2026](https://thepattern.media/editions/2026-07-31.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 31 July 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 1 August 2026**
 <!-- STAMP:END -->
