@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Resale is building the store network that retail abandoned.* Resale opened another permanent store. eBay bought Depop. The secondary market is now your nearest competitor on the high street. @ThePattern
-> → [The Pattern, No. 158 · 1 August 2026](https://thepattern.media/editions/2026-08-01.html)
+> 📡 **Today's culture signal** · Pulse 68/100
+> *Pop stars stopped making albums. They started building eras instead.* Pop stars stopped making albums. They started building eras. The bounded release is losing cultural authority across music, fashion, and collecting simultaneously. @ThePattern
+> → [The Pattern, No. 159 · 2 August 2026](https://thepattern.media/editions/2026-08-02.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 2 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 3 August 2026**
 <!-- STAMP:END -->
