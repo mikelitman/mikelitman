@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 68/100
-> *Fans now remix the record. The artist just gets a royalty.* The passive audience is gone. Spotify priced the remix, Kith co-engineered the shoe, and a doctoral student beat Nolan's entire press tour. Participation is the product now. #ThePattern
-> → [The Pattern, No. 162 · 5 August 2026](https://thepattern.media/editions/2026-08-05.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *AI ate Canva's growth. Designers went somewhere else entirely.* Canva added AI, costs spiked, users left for ChatGPT. The platform that wraps a commodity capability is one update away from irrelevance. Today's Pattern.
+> → [The Pattern, No. 164 · 7 August 2026](https://thepattern.media/editions/2026-08-07.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 7 August 2026**
 <!-- STAMP:END -->
