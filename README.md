@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *AI ate Canva's growth. Designers went somewhere else entirely.* Canva added AI, costs spiked, users left for ChatGPT. The platform that wraps a commodity capability is one update away from irrelevance. Today's Pattern.
-> → [The Pattern, No. 164 · 7 August 2026](https://thepattern.media/editions/2026-08-07.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Aspiration is back. Ralph Lauren just proved optimism sells.* Aspiration just posted a 23% profit margin. Irony is losing. Today's Pattern on what Ralph Lauren's results mean for every brand still chasing edge. #ThePattern
+> → [The Pattern, No. 165 · 8 August 2026](https://thepattern.media/editions/2026-08-08.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 8 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 9 August 2026**
 <!-- STAMP:END -->
