@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 58/100
-> *Place is the new product. AI companies are buying postcodes, not pitching decks.* Postcodes beat platforms. King's Cross, Rotterdam's post office, froyo pop-ups: physical location is reasserting itself as the carrier of meaning brands spent 5 years trying to digitise. @ThePattern
-> → [The Pattern, No. 167 · 10 August 2026](https://thepattern.media/editions/2026-08-10.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Anthropic is going public. The backlash is already priced in.* Anthropic is pricing cultural backlash into its IPO pitch. Doubt is no longer a comms problem. It's a market condition. @ThePattern #AI #Strategy
+> → [The Pattern, No. 168 · 11 August 2026](https://thepattern.media/editions/2026-08-11.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 11 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 12 August 2026**
 <!-- STAMP:END -->
