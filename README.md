@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Anthropic is going public. The backlash is already priced in.* Anthropic is pricing cultural backlash into its IPO pitch. Doubt is no longer a comms problem. It's a market condition. @ThePattern #AI #Strategy
-> → [The Pattern, No. 168 · 11 August 2026](https://thepattern.media/editions/2026-08-11.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Body is the new building. Retail space is becoming skin.* SKIMS turned skin tone into architecture. White Rabbit went viral for a 60-year-old wrapper. Physicality is making its case. Today's Pattern: the body is back as the primary brand surface.
+> → [The Pattern, No. 169 · 12 August 2026](https://thepattern.media/editions/2026-08-12.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 12 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 August 2026**
 <!-- STAMP:END -->
