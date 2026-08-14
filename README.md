@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Body is the new building. Retail space is becoming skin.* SKIMS turned skin tone into architecture. White Rabbit went viral for a 60-year-old wrapper. Physicality is making its case. Today's Pattern: the body is back as the primary brand surface.
-> → [The Pattern, No. 169 · 12 August 2026](https://thepattern.media/editions/2026-08-12.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Objects are becoming the new brand prestige signal.* Objects are the new media spend. LEGO x Nike, V&A Dundee, Saucony's StockX rise: product form is doing the cultural work that campaigns used to buy. @ThePattern
+> → [The Pattern, No. 170 · 13 August 2026](https://thepattern.media/editions/2026-08-13.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 14 August 2026**
 <!-- STAMP:END -->
