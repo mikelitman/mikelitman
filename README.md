@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Objects are becoming the new brand prestige signal.* Objects are the new media spend. LEGO x Nike, V&A Dundee, Saucony's StockX rise: product form is doing the cultural work that campaigns used to buy. @ThePattern
-> → [The Pattern, No. 170 · 13 August 2026](https://thepattern.media/editions/2026-08-13.html)
+> *Music is becoming the architecture of resale. Fashion is following.* Music is becoming the architecture of resale. Depop's Spotify move is not a campaign. It's a structural bet on who owns taste formation. #ThePattern
+> → [The Pattern, No. 171 · 14 August 2026](https://thepattern.media/editions/2026-08-14.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 14 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 15 August 2026**
 <!-- STAMP:END -->
