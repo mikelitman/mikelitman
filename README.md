@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Music is becoming the architecture of resale. Fashion is following.* Music is becoming the architecture of resale. Depop's Spotify move is not a campaign. It's a structural bet on who owns taste formation. #ThePattern
-> → [The Pattern, No. 171 · 14 August 2026](https://thepattern.media/editions/2026-08-14.html)
+> *Identity is the new product category. Brands are catching up.* Instagram's first rebrand in a decade, KFC opening a wine bar, Wonderskin hitting $200M. Identity is the new product category. Brands are catching up. | The Pattern
+> → [The Pattern, No. 172 · 15 August 2026](https://thepattern.media/editions/2026-08-15.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 15 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 16 August 2026**
 <!-- STAMP:END -->
