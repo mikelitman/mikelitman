@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Identity is the new product category. Brands are catching up.* Instagram's first rebrand in a decade, KFC opening a wine bar, Wonderskin hitting $200M. Identity is the new product category. Brands are catching up. | The Pattern
-> → [The Pattern, No. 172 · 15 August 2026](https://thepattern.media/editions/2026-08-15.html)
+> 📡 **Today's culture signal** · Pulse 71/100
+> *Objects are becoming the new media channel. Brands noticed.* Objects are the new media channel. Slawn's Rolex drops, Patek's Milan exhibition, Chinese EVs as entertainment venues — distribution just changed hands. @ThePattern
+> → [The Pattern, No. 173 · 16 August 2026](https://thepattern.media/editions/2026-08-16.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 16 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 17 August 2026**
 <!-- STAMP:END -->
