@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *AI personas are getting hired. The talent industry just changed shape.* AI personas are joining the creative workforce. Generic talent just got cheaper. Authentic ownership just got more expensive. @ThePattern // Monday August 17
-> → [The Pattern, No. 174 · 17 August 2026](https://thepattern.media/editions/2026-08-17.html)
+> *Street culture found its object fetish again. Supreme proved it.* Supreme just confirmed it: objects beat content. The drop era is back and it never really left. Today's Pattern. #ThePattern
+> → [The Pattern, No. 175 · 18 August 2026](https://thepattern.media/editions/2026-08-18.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 18 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 19 August 2026**
 <!-- STAMP:END -->
