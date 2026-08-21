@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 68/100
-> *Physical space is back as the prestige signal. Google just proved it.* Google in a Chicago landmark. Kith and BMW with two bespoke cars nobody can buy. Bugaboo's first collab in a decade. The pattern: physical presence is the new premium. @ThePattern
-> → [The Pattern, No. 176 · 19 August 2026](https://thepattern.media/editions/2026-08-19.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Collectible culture is repricing downwards. IKEA just moved the goalposts.* IKEA just entered the collectible design market. When the world's biggest furniture brand claims that word, it stops belonging to luxury. The floor moved. #ThePattern
+> → [The Pattern, No. 177 · 20 August 2026](https://thepattern.media/editions/2026-08-20.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 20 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 21 August 2026**
 <!-- STAMP:END -->
