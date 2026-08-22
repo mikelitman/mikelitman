@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Collectible culture is repricing downwards. IKEA just moved the goalposts.* IKEA just entered the collectible design market. When the world's biggest furniture brand claims that word, it stops belonging to luxury. The floor moved. #ThePattern
-> → [The Pattern, No. 177 · 20 August 2026](https://thepattern.media/editions/2026-08-20.html)
+> *Sport is the new retail calendar. Ralph Lauren just proved it.* Sport is the new retail calendar. Ralph Lauren's US Open play is a season, not a sponsorship. The campaign-plus-partnership model is over. #ThePattern
+> → [The Pattern, No. 178 · 21 August 2026](https://thepattern.media/editions/2026-08-21.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 21 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 22 August 2026**
 <!-- STAMP:END -->
