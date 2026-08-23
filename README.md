@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Sport is the new retail calendar. Ralph Lauren just proved it.* Sport is the new retail calendar. Ralph Lauren's US Open play is a season, not a sponsorship. The campaign-plus-partnership model is over. #ThePattern
-> → [The Pattern, No. 178 · 21 August 2026](https://thepattern.media/editions/2026-08-21.html)
+> *Authenticity now costs five dollars. Fugazi just set the price.* Fugazi sold cancelled Vans shoes for $5. Supreme's CCO left after 22 years. Streetwear's credibility infrastructure is repricing. @ThePattern
+> → [The Pattern, No. 179 · 22 August 2026](https://thepattern.media/editions/2026-08-22.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 22 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 23 August 2026**
 <!-- STAMP:END -->
