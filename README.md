@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Netflix becomes a platform. The streaming era just ended.* Netflix is building cable. Byredo is going mass. Loewe followed a meme to a campaign. The pattern: distribution is now the primary creative decision. @ThePattern
-> → [The Pattern, No. 182 · 25 August 2026](https://thepattern.media/editions/2026-08-25.html)
+> *Pop culture is Gucci's new creative director. Demna just made it official.* Gucci just proved subcultural credibility is a ceiling, not a floor. Demna's multi-genre hold is luxury's new creative brief. @ThePattern #BeforeItsObvious
+> → [The Pattern, No. 183 · 26 August 2026](https://thepattern.media/editions/2026-08-26.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 26 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 27 August 2026**
 <!-- STAMP:END -->
