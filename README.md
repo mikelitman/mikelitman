@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Creators are becoming storefronts. The retail category just changed forever.* Creators are storefronts now. YouTube + Amazon just collapsed the purchase funnel to zero. The brands not already inside creator content are structurally behind. #ThePattern
-> → [The Pattern, No. 185 · 28 August 2026](https://thepattern.media/editions/2026-08-28.html)
+> 📡 **Today's culture signal** · Pulse 62/100
+> *Resale data is now the best product research tool luxury has.* Resale markets are outperforming luxury's own product teams as trend intelligence. The RealReal's 2026 report makes it structural. Today's Pattern. #ThePattern
+> → [The Pattern, No. 186 · 29 August 2026](https://thepattern.media/editions/2026-08-29.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 29 August 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 30 August 2026**
 <!-- STAMP:END -->
