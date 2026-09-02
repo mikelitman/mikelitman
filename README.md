@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 71/100
-> *Community is the product now. Festivals proved it before brands did.* Community replaced content as the premium cultural product. Daisy Chain Fields, Grindr's EDGE tier, and Air Jordan 4 London all proved it today. @ThePattern
-> → [The Pattern, No. 188 · 31 August 2026](https://thepattern.media/editions/2026-08-31.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Cancelled culture just became the Met's new dress code.* The Met cancelled Galliano. Vaseline renamed itself after a viral mispronunciation. Institutions no longer hold editorial authority. Audiences do. @ThePattern
+> → [The Pattern, No. 189 · 1 September 2026](https://thepattern.media/editions/2026-09-01.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 1 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 2 September 2026**
 <!-- STAMP:END -->
