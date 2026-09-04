@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Craft is how brands signal values now. Scarcity just confirms it.* Craft is the new brand strategy. mfpen, Goop, and Anecdotes by Artists all launched today with provenance, not association, as the value claim. @ThePattern
-> → [The Pattern, No. 190 · 2 September 2026](https://thepattern.media/editions/2026-09-02.html)
+> *Identity is the new creative brief. Artists are rewriting their own names.* Miley drops her surname. Burberry commissions not licenses. Wearstler crosses into fashion. Identity is the new creative brief. | The Pattern 03.09.26
+> → [The Pattern, No. 191 · 3 September 2026](https://thepattern.media/editions/2026-09-03.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 3 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 4 September 2026**
 <!-- STAMP:END -->
