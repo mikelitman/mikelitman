@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Minimalism just became sneaker culture's most expensive flex.* The CDG x Air Jordan 11 cost $358 for what was taken away. Restraint is now the loudest signal in the room. @ThePatterndaily
-> → [The Pattern, No. 192 · 4 September 2026](https://thepattern.media/editions/2026-09-04.html)
+> *Power is transferring to engineers. Culture will follow the hardware.* Engineers are now making cultural decisions. Apple, Roland, Nvidia chips as diplomacy. The Pattern for 5 Sept: power transferred to builders. Taste follows. #ThePattern
+> → [The Pattern, No. 193 · 5 September 2026](https://thepattern.media/editions/2026-09-05.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 5 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 September 2026**
 <!-- STAMP:END -->
