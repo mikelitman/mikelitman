@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Power is transferring to engineers. Culture will follow the hardware.* Engineers are now making cultural decisions. Apple, Roland, Nvidia chips as diplomacy. The Pattern for 5 Sept: power transferred to builders. Taste follows. #ThePattern
-> → [The Pattern, No. 193 · 5 September 2026](https://thepattern.media/editions/2026-09-05.html)
+> 📡 **Today's culture signal** · Pulse 68/100
+> *Nostalgia is now a product category, not a marketing tactic.* Kith puts Yankees IP on your shelf, not your back. Sport is moving into the home. The lifestyle brand is the new competitor. @ThePattern #BeforeItsObvious
+> → [The Pattern, No. 195 · 7 September 2026](https://thepattern.media/editions/2026-09-07.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 7 September 2026**
 <!-- STAMP:END -->
