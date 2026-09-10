@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 68/100
-> *Craft is the new code. Making things by hand is a strategic position.* Handcraft stopped being humble. Stone replaces steel in London, couture becomes furniture, Laika gets a museum. Visible human effort is being repriced as the premium signal. #ThePattern
-> → [The Pattern, No. 196 · 8 September 2026](https://thepattern.media/editions/2026-09-08.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Technical credibility is replacing brand aspiration as the new luxury signal.* Salomon's new CD says it shouldn't be a fashion brand. That's not a retreat — it's the sharpest brand move of the year. Technical authority beat aspiration.
+> → [The Pattern, No. 197 · 9 September 2026](https://thepattern.media/editions/2026-09-09.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 9 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 10 September 2026**
 <!-- STAMP:END -->
