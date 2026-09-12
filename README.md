@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Privacy is the new premium. Apple just made it a hardware feature.* Privacy is now a hardware feature, not a policy document. Apple just changed the benchmark for every brand building ambient products. Today's Pattern. #ThePattern
-> → [The Pattern, No. 198 · 10 September 2026](https://thepattern.media/editions/2026-09-10.html)
+> *Culture and commerce are merging institutional form, not just product.* A24 x Dior picked a theatre, not a product drop. Rick x Dr. Martens are on collab three. Uniqlo grows by refusing to trend. The institution era is here. @ThePattern
+> → [The Pattern, No. 199 · 11 September 2026](https://thepattern.media/editions/2026-09-11.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 11 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 12 September 2026**
 <!-- STAMP:END -->
