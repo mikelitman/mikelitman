@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Ugly is the new premium. China just proved it with data.* Ugly is the new premium. China just proved it with 230M yuan in sales data. Today's Pattern: imperfection is winning the credibility argument that polish lost. #ThePattern
-> → [The Pattern, No. 200 · 12 September 2026](https://thepattern.media/editions/2026-09-12.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Heritage is fashion's new R&D. The archive beats the brief.* The archive is now the brief. Calvin Klein, Anna Sui, and adidas all went backwards this week — and all came out ahead. Today's Pattern. #ThePattern
+> → [The Pattern, No. 201 · 13 September 2026](https://thepattern.media/editions/2026-09-13.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 14 September 2026**
 <!-- STAMP:END -->
