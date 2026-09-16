@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *City streets became media. Brands stopped buying space and started owning it.* Savage X Fenty used sunlight to cast lingerie shadows across Manhattan. The street is now the best media buy available. @ThePattern #NYFW
-> → [The Pattern, No. 202 · 14 September 2026](https://thepattern.media/editions/2026-09-14.html)
+> *AI slowed down. Culture kept moving at full speed.* AI slowed down. Culture didn't. Gentle Monster, Prada, Miu Miu and Apple TV all made the same move today: permanence over activation. @ThePattern
+> → [The Pattern, No. 203 · 15 September 2026](https://thepattern.media/editions/2026-09-15.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 15 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 16 September 2026**
 <!-- STAMP:END -->
