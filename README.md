@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *AI slowed down. Culture kept moving at full speed.* AI slowed down. Culture didn't. Gentle Monster, Prada, Miu Miu and Apple TV all made the same move today: permanence over activation. @ThePattern
-> → [The Pattern, No. 203 · 15 September 2026](https://thepattern.media/editions/2026-09-15.html)
+> *Streamers enter cultural production. The streamer becomes a creative director.* Creators are entering institutions on their own terms. Studios are losing creative authority to AI. The border between inside and outside is gone. @ThePattern
+> → [The Pattern, No. 204 · 16 September 2026](https://thepattern.media/editions/2026-09-16.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 16 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 17 September 2026**
 <!-- STAMP:END -->
