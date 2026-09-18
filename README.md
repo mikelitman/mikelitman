@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Streamers enter cultural production. The streamer becomes a creative director.* Creators are entering institutions on their own terms. Studios are losing creative authority to AI. The border between inside and outside is gone. @ThePattern
-> → [The Pattern, No. 204 · 16 September 2026](https://thepattern.media/editions/2026-09-16.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *British fashion has no answer to its own identity question.* London Fashion Week cannot name what it stands for. That is both the problem and the opportunity. Today's Pattern: identity vacuums fill fast, and capital decides who fills them.
+> → [The Pattern, No. 205 · 17 September 2026](https://thepattern.media/editions/2026-09-17.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 17 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 18 September 2026**
 <!-- STAMP:END -->
