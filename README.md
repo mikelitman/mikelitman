@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Sport just found its most credible challenger to Nike's cultural monopoly.* On enters football with Mbappé. Rothy's wins DTC by going slow. Emory gets a museum show. The pattern: build the category or rent it forever. @ThePattern
-> → [The Pattern, No. 207 · 19 September 2026](https://thepattern.media/editions/2026-09-19.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Careful beats clever. The DTC era's survivors all look the same.* Skims at $5bn. Rothy's at $200m. Martens out of Diesel. Today's pattern: slow and specific beats fast and clever. Every time. #ThePattern
+> → [The Pattern, No. 208 · 20 September 2026](https://thepattern.media/editions/2026-09-20.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 20 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 21 September 2026**
 <!-- STAMP:END -->
