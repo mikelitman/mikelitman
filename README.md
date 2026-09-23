@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Solo economy rises: AI turned seven million Chinese into their own employer.* 7 million solo startups in China. AI made institutional employment optional for a generation. The cultural consequences for brands are only just beginning. #ThePattern
-> → [The Pattern, No. 209 · 21 September 2026](https://thepattern.media/editions/2026-09-21.html)
+> *High jewellery moves into fashion week. The category is rewriting its own rules.* De Beers at fashion week. Dior with A24. Issey Miyake at Tate Modern. Legacy brands are renting cultural authority they used to own. @ThePattern #LFW
+> → [The Pattern, No. 210 · 22 September 2026](https://thepattern.media/editions/2026-09-22.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 22 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 23 September 2026**
 <!-- STAMP:END -->
