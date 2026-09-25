@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Craft is fashion week's new power move. Milan just proved it.* Prada built a whole collection from one skirt. LEGO bets on adult collectors. Rhizome preserves digital art. The pattern: constraint is now the premium signal. /ThePattern
-> → [The Pattern, No. 211 · 23 September 2026](https://thepattern.media/editions/2026-09-23.html)
+> *Everyday objects are the new fashion category. Function lost the argument.* Laundry. Pet care. Audio. Fashion's logic is colonising every category with repeat purchases and visible use. The question is who moves first in yours. @ThePattern
+> → [The Pattern, No. 212 · 24 September 2026](https://thepattern.media/editions/2026-09-24.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 24 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 25 September 2026**
 <!-- STAMP:END -->
