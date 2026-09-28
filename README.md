@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Gadgets want to be jewellery now. Wearables lost the argument.* Meta designed an AI gadget shaped like a bag charm. Burberry cast Central Cee. MSCHF bent a Lexus into sculpture. The category is dissolving. Objects are the argument now. @ThePattern
-> → [The Pattern, No. 213 · 25 September 2026](https://thepattern.media/editions/2026-09-25.html)
+> 📡 **Today's culture signal** · Pulse 68/100
+> *Analog media is becoming a brand infrastructure, not a marketing tactic* Print magazines, sound installations, curved restaurants. Analog isn't nostalgia, it's the only media channel algorithms can't colonise.
+> → [The Pattern, No. 214 · 28 September 2026](https://thepattern.media/editions/2026-09-28.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 27 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 September 2026**
 <!-- STAMP:END -->
