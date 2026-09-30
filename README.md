@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 68/100
-> *Analog media is becoming a brand infrastructure, not a marketing tactic* Print magazines, sound installations, curved restaurants. Analog isn't nostalgia, it's the only media channel algorithms can't colonise.
-> → [The Pattern, No. 214 · 28 September 2026](https://thepattern.media/editions/2026-09-28.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Origin of manufacture is becoming the new creative statement* Gucci just put a Made in China label on its lead sneaker and called it a technical decision. The provenance era is ending. @ThePattern
+> → [The Pattern, No. 215 · 29 September 2026](https://thepattern.media/editions/2026-09-29.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 29 September 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 30 September 2026**
 <!-- STAMP:END -->
