@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Craft is becoming the new luxury proof point, not provenance* Craft intelligence is migrating across price tiers, brand ownership, and format. The institutions that built authority by controlling it are losing their grip. @ThePattern
-> → [The Pattern, No. 216 · 30 September 2026](https://thepattern.media/editions/2026-09-30.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *The body becomes the next premium subscription product* The body is the next premium subscription product. Neko Health, Function Health, Midjourney all converging on the same thesis. The status play is knowing first. | The Pattern
+> → [The Pattern, No. 217 · 1 October 2026](https://thepattern.media/editions/2026-10-01.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 1 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 2 October 2026**
 <!-- STAMP:END -->
