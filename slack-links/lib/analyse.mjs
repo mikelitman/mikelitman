@@ -178,6 +178,62 @@ export async function classifyLinks(links, { about, batchSize = 25, concurrency 
   await Promise.all(Array.from({ length: concurrency }, worker));
 }
 
+const WEEK_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["summary", "groups", "nudges"],
+  properties: {
+    summary: {
+      type: "string",
+      description: "2-3 sentences, second person: what this week's saving says you were thinking about",
+    },
+    groups: {
+      type: "array",
+      description: "4-8 groups. Every link id appears in exactly one group",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["name", "link_ids"],
+        properties: { name: { type: "string" }, link_ids: { type: "array", items: { type: "integer" } } },
+      },
+    },
+    nudges: {
+      type: "array",
+      description: "1-3 short, concrete suggestions: links to act on, try or connect to a project this week",
+      items: { type: "string" },
+    },
+  },
+};
+
+// Groups one week's links into specific threads (not broad categories) and
+// guarantees every link lands somewhere, even if the model misses one.
+export async function summariseWeek(links, { about } = {}) {
+  const rows = links.map((l) => {
+    const a = l.analysis;
+    return `[${l.id}] ${l.savedAt.slice(0, 10)} | ${a.category} | ${a.title} | ${a.intent} | why: ${a.why_saved}`;
+  });
+  const out = await askJson(client(), {
+    system:
+      "You write a weekly digest of the links someone saved to Slack this week. Group them into the specific threads of " +
+      "thought they reveal, named plainly (e.g. 'Pricing a voice agent', not 'AI'). Small weeks can have fewer groups. " +
+      "Write warmly and directly, in plain English, second person." +
+      aboutBlock(about),
+    prompt: `This week's ${rows.length} links:\n\n${rows.join("\n")}`,
+    schema: WEEK_SCHEMA,
+    effort: "medium",
+    maxTokens: 16000,
+  });
+  const valid = new Set(links.map((l) => l.id));
+  const seen = new Set();
+  for (const g of out.groups) {
+    g.link_ids = g.link_ids.filter((id) => valid.has(id) && !seen.has(id) && seen.add(id));
+  }
+  const missed = links.filter((l) => !seen.has(l.id)).map((l) => l.id);
+  if (missed.length) out.groups.push({ name: "Everything else", link_ids: missed });
+  out.groups = out.groups.filter((g) => g.link_ids.length);
+  return out;
+}
+
 export async function findThemes(links, { about } = {}) {
   const anthropic = client();
   const rows = links

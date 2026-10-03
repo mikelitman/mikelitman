@@ -1,5 +1,10 @@
 # Link Archaeology
 
+Two things in one folder:
+
+- **`weekly.mjs`**: a Slack DM every Sunday with every link you saved that week, and why ([setup](#weekly-digest-in-slack))
+- **`run.mjs`**: a one-off deep dive across everything you have ever saved
+
 You use Slack as a bookmark dump. This goes back through every link you've posted and works out:
 
 - **What it is**: a clean title, a one-line summary, a category and a type (tool, article, product…)
@@ -43,6 +48,30 @@ node run.mjs --api
 ```
 
 Then open `report.html`.
+
+## Weekly digest in Slack
+
+Every Sunday evening you get a Slack DM listing **every** link you saved that week, grouped into what you were actually thinking about, each with what it is and why you probably saved it. It opens with a short read on your week and 1–3 nudges ("try this", "this connects to that project").
+
+It runs on GitHub's schedule (`.github/workflows/weekly-links.yml`), so your computer doesn't need to be on.
+
+**One-time setup (about 10 minutes):**
+
+1. At https://api.slack.com/apps → *Create New App* → *From scratch*, pick your workspace.
+2. *OAuth & Permissions*:
+   - Under **User Token Scopes** add `search:read` and `chat:write`.
+   - Under **Bot Token Scopes** add `chat:write` and `im:write`. (Optional, but this is what makes the DM ping you. Without it the digest lands silently in your own "notes to self" DM.)
+3. *Install to Workspace*. Copy the **User OAuth Token** (`xoxp-…`) and the **Bot User OAuth Token** (`xoxb-…`).
+4. In this GitHub repo: *Settings* → *Secrets and variables* → *Actions* → *New repository secret*. Add:
+   - `SLACK_TOKEN`: the `xoxp-` token
+   - `SLACK_BOT_TOKEN`: the `xoxb-` token
+   - `ANTHROPIC_API_KEY`: your Anthropic key
+   - `ABOUT_ME` (optional): a few lines about you, like `about.example.txt`
+5. Test it now: *Actions* tab → *Weekly links digest* → *Run workflow*.
+
+To try it locally first without sending anything: `node weekly.mjs --dry-run`. To change the day or time, edit the `cron` line in the workflow. To cover only one channel, add a secret `SLACK_QUERY` set to e.g. `has:link from:me in:#bookmarks`.
+
+Costs pennies a week (a few cents per 25 links). The GitHub logs only show counts, never your links.
 
 ## Running it again later
 
