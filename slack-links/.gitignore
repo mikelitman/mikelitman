@@ -1,0 +1,7 @@
+# Your links and the report are private. Never commit them (this repo is public).
+node_modules/
+data/
+report.html
+about.txt
+slack-export*/
+*.zip

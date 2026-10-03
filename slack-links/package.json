@@ -1,0 +1,13 @@
+{
+  "name": "link-archaeology",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Understand, categorise and find themes across every link you've saved to Slack",
+  "type": "module",
+  "scripts": {
+    "start": "node run.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0"
+  }
+}
