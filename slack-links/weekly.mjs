@@ -47,9 +47,9 @@ const links = mergeLinks(raw)
   .map((l, i) => ({ id: i + 1, ...l }));
 console.log(`   ${links.length} links`);
 
-let messages;
+let digest;
 if (!links.length) {
-  messages = ["*Your week in links* · nothing saved this week. Quiet one."];
+  digest = { head: "*Your week in links* · nothing saved this week. Quiet one.", thread: [] };
 } else {
   console.log("2. Reading page titles");
   await enrichAll(links);
@@ -60,12 +60,12 @@ if (!links.length) {
   const week = analysed.length
     ? await summariseWeek(analysed, { about })
     : { summary: "Claude couldn't analyse this week's links, so here they are as saved.", groups: [], nudges: [] };
-  messages = buildDigest(links, week, { from, to });
+  digest = buildDigest(links, week, { from, to });
 }
 
 if (args["dry-run"]) {
-  console.log("\n" + messages.join("\n\n---\n\n"));
+  console.log(`\n${digest.head}\n\n--- thread ---\n\n${digest.thread.join("\n\n---\n\n")}`);
 } else {
-  await sendDigest(messages, { userToken: SLACK_TOKEN, botToken: SLACK_BOT_TOKEN });
-  console.log(`Sent ${messages.length} messages to your Slack DMs.`);
+  const sent = await sendDigest(digest, { userToken: SLACK_TOKEN, botToken: SLACK_BOT_TOKEN });
+  console.log(`Sent your digest (1 message + ${sent - 1} in its thread).`);
 }

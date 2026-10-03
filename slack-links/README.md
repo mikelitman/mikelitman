@@ -51,7 +51,7 @@ Then open `report.html`.
 
 ## Weekly digest in Slack
 
-Every Sunday evening you get a Slack DM listing **every** link you saved that week, grouped into what you were actually thinking about, each with what it is and why you probably saved it. It opens with a short read on your week and 1–3 nudges ("try this", "this connects to that project").
+Every Sunday evening you get one Slack DM: a short read on your week, 1–3 nudges ("try this", "this connects to that project") and an index of the threads you were circling. Underneath, in its thread, is **every** link you saved that week, one line each with why you saved it.
 
 It runs on GitHub's schedule (`.github/workflows/weekly-links.yml`), so your computer doesn't need to be on.
 
