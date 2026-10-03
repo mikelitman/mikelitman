@@ -35,7 +35,7 @@ const LINK_SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["id", "title", "summary", "category", "type", "why_saved", "intent", "tags", "shelf_life"],
+        required: ["id", "title", "summary", "category", "type", "why_saved", "why_short", "intent", "tags", "shelf_life"],
         properties: {
           id: { type: "integer" },
           title: { type: "string", description: "Clean, human title for the link" },
@@ -48,6 +48,10 @@ const LINK_SCHEMA = {
           why_saved: {
             type: "string",
             description: "Second person, one or two sentences: the most likely reason you saved it in that moment",
+          },
+          why_short: {
+            type: "string",
+            description: "The same reason in under 12 words, no full stop, for a one-line digest",
           },
           intent: {
             type: "string",
@@ -193,8 +197,12 @@ const WEEK_SCHEMA = {
       items: {
         type: "object",
         additionalProperties: false,
-        required: ["name", "link_ids"],
-        properties: { name: { type: "string" }, link_ids: { type: "array", items: { type: "integer" } } },
+        required: ["name", "gist", "link_ids"],
+        properties: {
+          name: { type: "string" },
+          gist: { type: "string", description: "One short line: what you were circling in this group" },
+          link_ids: { type: "array", items: { type: "integer" } },
+        },
       },
     },
     nudges: {
@@ -229,7 +237,7 @@ export async function summariseWeek(links, { about } = {}) {
     g.link_ids = g.link_ids.filter((id) => valid.has(id) && !seen.has(id) && seen.add(id));
   }
   const missed = links.filter((l) => !seen.has(l.id)).map((l) => l.id);
-  if (missed.length) out.groups.push({ name: "Everything else", link_ids: missed });
+  if (missed.length) out.groups.push({ name: "Everything else", gist: "Links that didn't fit a thread", link_ids: missed });
   out.groups = out.groups.filter((g) => g.link_ids.length);
   return out;
 }

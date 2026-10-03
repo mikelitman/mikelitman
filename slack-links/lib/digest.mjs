@@ -1,52 +1,55 @@
-// Formats the weekly digest as Slack messages and sends it to you as a DM.
+// Formats the weekly digest for Slack and sends it to you as a DM.
+// One short message up top (the read on your week, plus an index of threads),
+// then every link, one line each, in a thread underneath.
 
 const slackEsc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const MAX_CHARS = 3500; // keep each message comfortably inside Slack's limits
+const TITLE_MAX = 70;
+
+function shorten(s, n) {
+  return s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s;
+}
 
 function linkLine(l) {
   const a = l.analysis;
-  const extras = [a.intent];
-  if (l.saves.length > 1) extras.push(`saved ${l.saves.length}×`);
-  if ((l.fetched?.status ?? 200) >= 400) extras.push("link looks dead");
-  const lines = [
-    `• <${l.url}|${slackEsc(a.title).replace(/\|/g, "/")}>  _${extras.join(" · ")}_`,
-    `      ${slackEsc(a.summary)}`,
-    `      *Why:* ${slackEsc(a.why_saved)}`,
-  ];
-  return lines.join("\n");
-}
-
-function plainLine(l) {
-  // Links Claude couldn't analyse still get listed, so nothing goes missing.
-  return `• <${l.url}|${slackEsc(l.preview?.title || l.url).replace(/\|/g, "/")}>${l.note ? `\n      You wrote: ${slackEsc(l.note)}` : ""}`;
+  const title = slackEsc(shorten(a?.title || l.preview?.title || l.url, TITLE_MAX)).replace(/\|/g, "/");
+  const flags = [];
+  if (l.saves.length > 1) flags.push(`${l.saves.length}×`);
+  if ((l.fetched?.status ?? 200) >= 400) flags.push("dead");
+  const why = a ? a.why_short || a.why_saved : l.note;
+  return `• <${l.url}|${title}>${why ? ` · ${slackEsc(why)}` : ""}${flags.length ? ` _(${flags.join(", ")})_` : ""}`;
 }
 
 export function buildDigest(links, week, { from, to }) {
   const byId = new Map(links.map((l) => [l.id, l]));
-  const range = `${from.toLocaleDateString("en-GB", { day: "numeric", month: "short" })} – ${to.toLocaleDateString("en-GB", { day: "numeric", month: "short" })}`;
-  const messages = [];
+  const fmt = (d) => d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
 
-  let head = `*Your week in links* · ${range} · ${links.length} saved\n\n${slackEsc(week.summary)}`;
-  if (week.nudges.length) head += `\n\n*This week, maybe:*\n${week.nudges.map((n) => `→ ${slackEsc(n)}`).join("\n")}`;
-  messages.push(head);
-
-  const unanalysed = links.filter((l) => !l.analysis);
   const groups = [...week.groups];
-  if (unanalysed.length) groups.push({ name: "Couldn't analyse these", link_ids: unanalysed.map((l) => l.id), plain: true });
+  const unanalysed = links.filter((l) => !l.analysis).map((l) => l.id);
+  if (unanalysed.length) groups.push({ name: "Couldn't analyse these", gist: "Listed as you saved them", link_ids: unanalysed });
 
-  for (const g of groups) {
-    const lines = g.link_ids.map((id) => byId.get(id)).filter(Boolean).map((l) => (g.plain || !l.analysis ? plainLine(l) : linkLine(l)));
-    let current = `*${slackEsc(g.name)}* (${lines.length})`;
-    for (const line of lines) {
-      if (current.length + line.length + 2 > MAX_CHARS) {
-        messages.push(current);
-        current = `*${slackEsc(g.name)}* (cont.)`;
-      }
-      current += `\n\n${line}`;
-    }
-    messages.push(current);
+  let head = `*Your week in links* · ${fmt(from)} – ${fmt(to)} · ${links.length} saved\n\n${slackEsc(week.summary)}`;
+  if (week.nudges.length) head += `\n\n*This week, maybe:*\n${week.nudges.map((n) => `→ ${slackEsc(n)}`).join("\n")}`;
+  if (groups.length) {
+    head += `\n\n*What you were circling:*\n`;
+    head += groups.map((g, i) => `${i + 1}. *${slackEsc(g.name)}* (${g.link_ids.length}) · ${slackEsc(g.gist || "")}`).join("\n");
+    head += `\n\n_Every link is in the thread 🧵, one line each._`;
   }
-  return messages;
+
+  const thread = [];
+  groups.forEach((g, i) => {
+    const title = `*${i + 1}. ${slackEsc(g.name)}*`;
+    let current = `${title} (${g.link_ids.length})`;
+    for (const line of g.link_ids.map((id) => byId.get(id)).filter(Boolean).map(linkLine)) {
+      if (current.length + line.length + 1 > MAX_CHARS) {
+        thread.push(current);
+        current = `${title} (cont.)`;
+      }
+      current += `\n${line}`;
+    }
+    thread.push(current);
+  });
+  return { head, thread };
 }
 
 async function slack(token, method, body) {
@@ -62,12 +65,17 @@ async function slack(token, method, body) {
 
 // With a bot token the DM comes from the app, so you get a notification.
 // Without one it goes into your own "notes to self" DM (no notification).
-export async function sendDigest(messages, { userToken, botToken }) {
+export async function sendDigest({ head, thread }, { userToken, botToken }) {
   const me = (await slack(userToken, "auth.test", {})).user_id;
   const token = botToken || userToken;
   const channel = botToken ? (await slack(botToken, "conversations.open", { users: me })).channel.id : me;
-  for (const text of messages) {
-    await slack(token, "chat.postMessage", { channel, text, unfurl_links: false, unfurl_media: false, mrkdwn: true });
+  const post = (text, extra = {}) =>
+    slack(token, "chat.postMessage", { channel, text, unfurl_links: false, unfurl_media: false, mrkdwn: true, ...extra });
+
+  const top = await post(head);
+  for (const text of thread) {
     await new Promise((r) => setTimeout(r, 1100)); // stay under Slack's 1 msg/sec limit
+    await post(text, { thread_ts: top.ts });
   }
+  return 1 + thread.length;
 }
