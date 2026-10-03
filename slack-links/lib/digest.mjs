@@ -20,8 +20,14 @@ function linkLine(l) {
   return `• <${l.url}|${title}>${why ? ` · ${slackEsc(why)}` : ""}${flags.length ? ` _(${flags.join(", ")})_` : ""}`;
 }
 
-export function buildDigest(links, week, { from, to }) {
+function linkRef(l) {
+  const title = slackEsc(shorten(l.analysis?.title || l.preview?.title || l.url, 50)).replace(/\|/g, "/");
+  return `<${l.url}|${title}>`;
+}
+
+export function buildDigest(links, week, { from, to, earlier = [] }) {
   const byId = new Map(links.map((l) => [l.id, l]));
+  const earlierById = new Map(earlier.map((l) => [l.id, l]));
   const fmt = (d) => d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
 
   const groups = [...week.groups];
@@ -30,6 +36,16 @@ export function buildDigest(links, week, { from, to }) {
 
   let head = `*Your week in links* · ${fmt(from)} – ${fmt(to)} · ${links.length} saved\n\n${slackEsc(week.summary)}`;
   if (week.nudges.length) head += `\n\n*This week, maybe:*\n${week.nudges.map((n) => `→ ${slackEsc(n)}`).join("\n")}`;
+  const echoes = (week.echoes || []).filter((e) => byId.has(e.id) && earlierById.has(e.earlier_id));
+  if (echoes.length) {
+    head += `\n\n*Echoes from earlier:*\n`;
+    head += echoes
+      .map((e) => {
+        const old = earlierById.get(e.earlier_id);
+        return `↺ ${linkRef(byId.get(e.id))} ← ${linkRef(old)} (${fmt(new Date(old.savedAt))}): ${slackEsc(e.note)}`;
+      })
+      .join("\n");
+  }
   if (groups.length) {
     head += `\n\n*What you were circling:*\n`;
     head += groups.map((g, i) => `${i + 1}. *${slackEsc(g.name)}* (${g.link_ids.length}) · ${slackEsc(g.gist || "")}`).join("\n");
@@ -49,6 +65,25 @@ export function buildDigest(links, week, { from, to }) {
     }
     thread.push(current);
   });
+  return { head, thread };
+}
+
+export function buildMonthly(links, month, { from, to }) {
+  const byId = new Map(links.map((l) => [l.id, l]));
+  const fmt = (d) => d.toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+
+  let head = `*Your month in links* · ${fmt(from)} – ${fmt(to)} · ${links.length} saved\n\n${slackEsc(month.portrait)}`;
+  head += `\n\n*Themes:*\n${month.themes.map((t, i) => `${i + 1}. *${slackEsc(t.name)}* (~${t.count}, ${t.trend}) · ${slackEsc(t.gist)}`).join("\n")}`;
+  if (month.shifts.length) head += `\n\n*How your attention moved:*\n${month.shifts.map((s) => `• ${slackEsc(s)}`).join("\n")}`;
+  const resurface = month.resurface.filter((r) => byId.has(r.id));
+  if (resurface.length) head += `\n\n*Worth going back to:*\n${resurface.map((r) => `→ ${linkRef(byId.get(r.id))}: ${slackEsc(r.reason)}`).join("\n")}`;
+  if (month.open_loops.length) head += `\n\n*Open loops:*\n${month.open_loops.map((o) => `○ ${slackEsc(o)}`).join("\n")}`;
+  head += `\n\n_The best few links per theme are in the thread 🧵._`;
+
+  const thread = month.themes
+    .map((t, i) => [t, i])
+    .filter(([t]) => t.best_ids.length)
+    .map(([t, i]) => `*${i + 1}. ${slackEsc(t.name)}*\n${t.best_ids.map((id) => `• ${linkRef(byId.get(id))}`).join("\n")}`);
   return { head, thread };
 }
 

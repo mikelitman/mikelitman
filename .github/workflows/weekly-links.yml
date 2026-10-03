@@ -4,6 +4,15 @@ on:
   schedule:
     - cron: '7 17 * * 0'   # Sundays 17:07 UTC (6pm UK summer time, 5pm winter)
   workflow_dispatch:        # allow manual runs
+    inputs:
+      weeks_ago:
+        description: 'Which weeks to send, e.g. "0" for this week or "3 2 1" to catch up on past weeks'
+        type: string
+        default: '0'
+      monthly:
+        description: 'Also send the monthly look-back now'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -25,7 +34,28 @@ jobs:
 
       # Logs only show counts, never links (this repo is public).
       - name: Send this week's digest
-        run: node weekly.mjs
+        run: |
+          for n in ${WEEKS_AGO:-0}; do
+            [[ "$n" =~ ^[0-9]+$ ]] || { echo "Skipping '$n': not a number"; continue; }
+            node weekly.mjs --weeks-ago "$n"
+          done
+        env:
+          WEEKS_AGO: ${{ inputs.weeks_ago }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ABOUT_ME: ${{ secrets.ABOUT_ME }}
+          SLACK_QUERY: ${{ secrets.SLACK_QUERY }}
+
+      # First Sunday of the month (or on request): look back across the month.
+      - name: Send the monthly look-back
+        if: always()
+        run: |
+          if [[ "${{ inputs.monthly }}" == "true" ]] || [[ "${{ github.event_name }}" == "schedule" && $(date +%-d) -le 7 ]]; then
+            node monthly.mjs
+          else
+            echo "Not the first Sunday of the month, skipping."
+          fi
         env:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

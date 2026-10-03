@@ -3,6 +3,7 @@
 Two things in one folder:
 
 - **`weekly.mjs`**: a Slack DM every Sunday with every link you saved that week, and why ([setup](#weekly-digest-in-slack))
+- **`monthly.mjs`**: on the first Sunday of each month, a look-back across the last 30 days
 - **`run.mjs`**: a one-off deep dive across everything you have ever saved
 
 You use Slack as a bookmark dump. This goes back through every link you've posted and works out:
@@ -53,6 +54,10 @@ Then open `report.html`.
 
 Every Sunday evening you get one Slack DM: a short read on your week, 1–3 nudges ("try this", "this connects to that project") and an index of the threads you were circling. Underneath, in its thread, is **every** link you saved that week, one line each with why you saved it.
 
+It also points out **echoes**: links this week that connect to something you saved in the previous 7 weeks.
+
+On the **first Sunday of each month** a second DM looks back across the last 30 days: the themes, how your attention moved week to week, 5 links worth going back to, and things you meant to try or build and never came back to.
+
 It runs on GitHub's schedule (`.github/workflows/weekly-links.yml`), so your computer doesn't need to be on.
 
 **One-time setup (about 10 minutes):**
@@ -68,6 +73,8 @@ It runs on GitHub's schedule (`.github/workflows/weekly-links.yml`), so your com
    - `ANTHROPIC_API_KEY`: your Anthropic key
    - `ABOUT_ME` (optional): a few lines about you, like `about.example.txt`
 5. Test it now: *Actions* tab → *Weekly links digest* → *Run workflow*.
+   - To catch up on past weeks, put e.g. `3 2 1` in *Which weeks to send*.
+   - Tick *Also send the monthly look-back now* to get one straight away.
 
 To try it locally first without sending anything: `node weekly.mjs --dry-run`. To change the day or time, edit the `cron` line in the workflow. To cover only one channel, add a secret `SLACK_QUERY` set to e.g. `has:link from:me in:#bookmarks`.
 

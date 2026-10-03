@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 // Weekly digest: every link you saved to Slack in the last 7 days, each with
-// what it is and why you probably saved it, sent to you as a Slack DM.
+// what it is and why you probably saved it, sent to you as a Slack DM. Links
+// from the weeks before are used to spot ideas you keep coming back to.
 //
 //   SLACK_TOKEN=xoxp-... ANTHROPIC_API_KEY=sk-ant-... node weekly.mjs
 //   node weekly.mjs --dry-run      (print the digest instead of sending it)
+//   node weekly.mjs --weeks-ago 2  (the digest for the week before last)
 
 import fs from "node:fs";
 import path from "node:path";
 import { parseArgs } from "node:util";
-import { readFromApi, mergeLinks } from "./lib/slack.mjs";
+import { collectSince, numbered } from "./lib/collect.mjs";
 import { enrichAll } from "./lib/enrich.mjs";
 import { classifyLinks, summariseWeek } from "./lib/analyse.mjs";
 import { buildDigest, sendDigest } from "./lib/digest.mjs";
@@ -17,6 +19,8 @@ const here = path.dirname(new URL(import.meta.url).pathname);
 const { values: args } = parseArgs({
   options: {
     days: { type: "string", default: "7" },
+    "weeks-ago": { type: "string", default: "0" },
+    "lookback-weeks": { type: "string", default: "7" },
     "dry-run": { type: "boolean" },
     about: { type: "string", default: path.join(here, "about.txt") },
   },
@@ -34,18 +38,15 @@ if (!ANTHROPIC_API_KEY) fail("Set ANTHROPIC_API_KEY. See README.md.");
 // ABOUT_ME lets the scheduled run use your "about" text without committing a file.
 const about = process.env.ABOUT_ME || (fs.existsSync(args.about) ? fs.readFileSync(args.about, "utf8") : "");
 
-const to = new Date();
+const to = new Date(Date.now() - Number(args["weeks-ago"]) * 7 * 86400_000);
 const from = new Date(to - Number(args.days) * 86400_000);
-// Slack's "after:" excludes the given day, so ask from a day earlier and trim.
-const after = new Date(from - 86400_000).toISOString().slice(0, 10);
-const query = `${process.env.SLACK_QUERY || "has:link from:me"} after:${after}`;
+const lookbackFrom = new Date(from - Number(args["lookback-weeks"]) * 7 * 86400_000);
 
-console.log(`1. Collecting links saved since ${from.toISOString().slice(0, 10)}`);
-const raw = (await readFromApi(SLACK_TOKEN, { query })).filter((l) => new Date(l.savedAt) >= from);
-const links = mergeLinks(raw)
-  .sort((a, b) => a.savedAt.localeCompare(b.savedAt))
-  .map((l, i) => ({ id: i + 1, ...l }));
-console.log(`   ${links.length} links`);
+console.log(`1. Collecting links saved since ${lookbackFrom.toISOString().slice(0, 10)}`);
+const raw = await collectSince(SLACK_TOKEN, lookbackFrom, { query: process.env.SLACK_QUERY || undefined });
+const links = numbered(raw.filter((l) => new Date(l.savedAt) >= from && new Date(l.savedAt) < to));
+const earlier = numbered(raw.filter((l) => new Date(l.savedAt) < from), 100_001);
+console.log(`   ${links.length} links this week, ${earlier.length} in the weeks before`);
 
 let digest;
 if (!links.length) {
@@ -58,9 +59,9 @@ if (!links.length) {
   console.log("4. Writing the digest");
   const analysed = links.filter((l) => l.analysis);
   const week = analysed.length
-    ? await summariseWeek(analysed, { about })
+    ? await summariseWeek(analysed, { about, earlier })
     : { summary: "Claude couldn't analyse this week's links, so here they are as saved.", groups: [], nudges: [] };
-  digest = buildDigest(links, week, { from, to });
+  digest = buildDigest(links, week, { from, to, earlier });
 }
 
 if (args["dry-run"]) {

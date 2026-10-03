@@ -185,11 +185,27 @@ export async function classifyLinks(links, { about, batchSize = 25, concurrency 
 const WEEK_SCHEMA = {
   type: "object",
   additionalProperties: false,
-  required: ["summary", "groups", "nudges"],
+  required: ["summary", "groups", "nudges", "echoes"],
   properties: {
     summary: {
       type: "string",
       description: "2-3 sentences, second person: what this week's saving says you were thinking about",
+    },
+    echoes: {
+      type: "array",
+      description:
+        "0-4 real connections between a link saved this week and one saved in earlier weeks (same idea coming back, " +
+        "a question you're still chasing, a tool you saved twice). Only strong, specific ones; empty is fine",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["id", "earlier_id", "note"],
+        properties: {
+          id: { type: "integer", description: "This week's link" },
+          earlier_id: { type: "integer", description: "The earlier link it connects to" },
+          note: { type: "string", description: "One short line on the connection" },
+        },
+      },
     },
     groups: {
       type: "array",
@@ -215,18 +231,23 @@ const WEEK_SCHEMA = {
 
 // Groups one week's links into specific threads (not broad categories) and
 // guarantees every link lands somewhere, even if the model misses one.
-export async function summariseWeek(links, { about } = {}) {
+export async function summariseWeek(links, { about, earlier = [] } = {}) {
   const rows = links.map((l) => {
     const a = l.analysis;
     return `[${l.id}] ${l.savedAt.slice(0, 10)} | ${a.category} | ${a.title} | ${a.intent} | why: ${a.why_saved}`;
   });
+  const earlierRows = earlier.map(rawRow);
   const out = await askJson(client(), {
     system:
       "You write a weekly digest of the links someone saved to Slack this week. Group them into the specific threads of " +
       "thought they reveal, named plainly (e.g. 'Pricing a voice agent', not 'AI'). Small weeks can have fewer groups. " +
       "Write warmly and directly, in plain English, second person." +
       aboutBlock(about),
-    prompt: `This week's ${rows.length} links:\n\n${rows.join("\n")}`,
+    prompt:
+      `This week's ${rows.length} links:\n\n${rows.join("\n")}` +
+      (earlierRows.length
+        ? `\n\nFor spotting echoes only (don't group these), links saved in the weeks before (date | title | what they wrote):\n\n${earlierRows.join("\n")}`
+        : ""),
     schema: WEEK_SCHEMA,
     effort: "medium",
     maxTokens: 16000,
@@ -239,6 +260,80 @@ export async function summariseWeek(links, { about } = {}) {
   const missed = links.filter((l) => !seen.has(l.id)).map((l) => l.id);
   if (missed.length) out.groups.push({ name: "Everything else", gist: "Links that didn't fit a thread", link_ids: missed });
   out.groups = out.groups.filter((g) => g.link_ids.length);
+  const earlierIds = new Set(earlier.map((l) => l.id));
+  out.echoes = out.echoes.filter((e) => valid.has(e.id) && earlierIds.has(e.earlier_id));
+  return out;
+}
+
+// A link before any AI analysis: what Slack's preview and your note say.
+function rawRow(l) {
+  const title = l.preview?.title || l.url;
+  const notes = [...new Set(l.saves.map((s) => s.note).filter(Boolean))].join(" | ").slice(0, 200);
+  return `[${l.id}] ${l.savedAt.slice(0, 10)} | ${title}${notes ? ` | ${notes}` : ""}`;
+}
+
+const MONTH_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["portrait", "themes", "shifts", "resurface", "open_loops"],
+  properties: {
+    portrait: { type: "string", description: "3-4 sentences, second person: what this month of saving says about you" },
+    themes: {
+      type: "array",
+      description: "5-8 specific themes across the month",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["name", "gist", "trend", "count", "best_ids"],
+        properties: {
+          name: { type: "string" },
+          gist: { type: "string", description: "One line: what you were working out" },
+          trend: { type: "string", enum: ["new this month", "building", "steady", "fading"] },
+          count: { type: "integer", description: "Roughly how many links belong to it" },
+          best_ids: { type: "array", items: { type: "integer" }, description: "Up to 5 links most worth a look" },
+        },
+      },
+    },
+    shifts: {
+      type: "array",
+      description: "2-4 lines on how your attention moved across the weeks of the month",
+      items: { type: "string" },
+    },
+    resurface: {
+      type: "array",
+      description: "5 links most worth going back to now",
+      items: {
+        type: "object",
+        additionalProperties: false,
+        required: ["id", "reason"],
+        properties: { id: { type: "integer" }, reason: { type: "string" } },
+      },
+    },
+    open_loops: {
+      type: "array",
+      description: "Up to 5 things you clearly meant to try, build or buy and never came back to",
+      items: { type: "string" },
+    },
+  },
+};
+
+// Monthly look-back over raw links (titles + your notes), without per-link
+// analysis: cheap enough to run over a whole month in one request.
+export async function summariseMonth(links, { about } = {}) {
+  const out = await askJson(client(), {
+    system:
+      "You write a monthly look-back on the links someone saved to Slack as bookmarks. Find the specific themes " +
+      "(not broad categories), how their attention moved week to week, what's worth revisiting and what they meant " +
+      "to act on but didn't. Write warmly and directly, in plain English, second person." +
+      aboutBlock(about),
+    prompt: `This month's ${links.length} links (date | title | what they wrote):\n\n${links.map(rawRow).join("\n")}`,
+    schema: MONTH_SCHEMA,
+    effort: "high",
+    maxTokens: 32000,
+  });
+  const valid = new Set(links.map((l) => l.id));
+  for (const t of out.themes) t.best_ids = t.best_ids.filter((id) => valid.has(id)).slice(0, 5);
+  out.resurface = out.resurface.filter((r) => valid.has(r.id));
   return out;
 }
 
