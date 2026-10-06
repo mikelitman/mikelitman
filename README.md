@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Scarcity returns to fashion. The volume era is over.* Nike's Jordan supply cut, Johansson's beauty brand folding, Fel Beauty selling out 4x: scarcity beats scale and the volume era is over.
-> → [The Pattern, No. 218 · 2 October 2026](https://thepattern.media/editions/2026-10-02.html)
+> *Artist as collaborator rewrites the fashion house power structure* The muse model is over. Björk wore Mugler mid-performance as it hit the runway. Two equals, moving simultaneously. Fashion's next power structure just showed itself. @ThePattern
+> → [The Pattern, No. 219 · 5 October 2026](https://thepattern.media/editions/2026-10-05.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 5 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 October 2026**
 <!-- STAMP:END -->
