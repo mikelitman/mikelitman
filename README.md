@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 74/100
-> *Artist as collaborator rewrites the fashion house power structure* The muse model is over. Björk wore Mugler mid-performance as it hit the runway. Two equals, moving simultaneously. Fashion's next power structure just showed itself. @ThePattern
-> → [The Pattern, No. 219 · 5 October 2026](https://thepattern.media/editions/2026-10-05.html)
+> *Hollywood just turned the AI boardroom into prestige cinema* When a boardroom coup becomes Guadagnino's best film in a decade, the AI industry stops being a tech story. It becomes a myth. And myths don't answer to comms teams. #ThePattern
+> → [The Pattern, No. 220 · 6 October 2026](https://thepattern.media/editions/2026-10-06.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 7 October 2026**
 <!-- STAMP:END -->
