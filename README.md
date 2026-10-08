@@ -27,7 +27,7 @@ The ones people actually use.
 
 📊 [**The Relevance Index**](https://therelevanceindex.com) (1,200+ brands) - Cultural relevance, scored. A hybrid model combining real-time data and AI analysis across five cultural domains, updated weekly
 
-📞 [**Buggy Smart**](https://buggysmart.app) (10,000+ calls) - An AI voice agent that phoned 1,000+ London venues to ask one question: can a pushchair get through the door? Free interactive map, no ads, just real phone calls
+📞 [**Buggy Smart**](https://buggysmart.app) (10,000+ calls) - An AI voice agent that phoned London venues to ask one question: can a pushchair get through the door? Free interactive map of 1,200+ venues, no ads, just real phone calls
 
 🍽️ [**First Order**](https://first-order-london.netlify.app) (voice agent) - An AI voice agent that called hundreds of London restaurants to ask one thing: what should I order? Real dishes, straight from the kitchen
 
@@ -59,7 +59,7 @@ Scoring what culture feels but can't usually measure.
 
 Agents that pick up the phone and gather data nobody else collects.
 
-📞 [**Buggy Smart**](https://buggysmart.app) (1,000+ venues) - Called London venues to check pushchair access, mapped across 24 boroughs
+📞 [**Buggy Smart**](https://buggysmart.app) (1,200+ venues) - Called London venues to check pushchair access, mapped across 27 boroughs
 
 🍽️ [**First Order**](https://first-order-london.netlify.app) (hundreds of calls) - Called London restaurants to find the one dish you have to order, straight from the kitchen
 
