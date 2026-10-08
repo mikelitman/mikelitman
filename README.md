@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 74/100
-> *Hollywood just turned the AI boardroom into prestige cinema* When a boardroom coup becomes Guadagnino's best film in a decade, the AI industry stops being a tech story. It becomes a myth. And myths don't answer to comms teams. #ThePattern
-> → [The Pattern, No. 220 · 6 October 2026](https://thepattern.media/editions/2026-10-06.html)
+> 📡 **Today's culture signal** · Pulse 72/100
+> *Mass-market brands borrowed luxury's grammar. Now they need the vocabulary.* Mass brands borrowed luxury's grammar. The attention spikes. The credibility doesn't stick. Today's Pattern on why retention is now the harder problem. #ThePattern
+> → [The Pattern, No. 221 · 7 October 2026](https://thepattern.media/editions/2026-10-07.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 7 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 8 October 2026**
 <!-- STAMP:END -->
