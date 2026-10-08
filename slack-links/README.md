@@ -96,7 +96,7 @@ Results are saved in `data/`. Each new run only analyses links it hasn't seen be
 
 ## Cost and time
 
-It uses Claude Opus 5.5, 25 links per request. Estimated **about $5 per 1,000 links**, and a few minutes. Start with `--limit 50` to see real cost and quality. Pages are visited only to read their title and description.
+It uses Claude Sonnet 5.5, 25 links per request. Estimated **about $2.50 per 1,000 links**, and a few minutes. Start with `--limit 50` to see real cost and quality. Pages are visited only to read their title and description.
 
 ## Privacy
 
