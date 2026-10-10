@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Tokyo is where brand marriages go to prove themselves real.* NikeSKIMS opens a cafe in Tokyo. Disney moves creators into development. Apparatus returns after 5 years with Persian mythology. The brands winning right now make the founder's world the product. /ThePattern
-> → [The Pattern, No. 222 · 8 October 2026](https://thepattern.media/editions/2026-10-08.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *Gen Z bought the art. Now the market has to take them seriously.* Gen Z is now the biggest-spending generation of art collectors. The institutions that treated them as an 'emerging audience' are behind. |
+> → [The Pattern, No. 223 · 9 October 2026](https://thepattern.media/editions/2026-10-09.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 9 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 10 October 2026**
 <!-- STAMP:END -->
