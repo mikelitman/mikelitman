@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse 72/100
-> *Vertical video graduates from format experiment to its own genre* Vertical video just became a genre. Pandemic sheds just became design history. When something gets a name, it gets a budget. Today's Pattern: @ThePattern
-> → [The Pattern, No. 224 · 12 October 2026](https://thepattern.media/editions/2026-10-12.html)
+> *Luxury found its new home east, and Kim Jones made it official* Kim Jones debuts in Hong Kong, not Paris. Hollywood turns on the tech founder. Nvidia loses China. The geography of cultural authority is being redrawn. #ThePattern
+> → [The Pattern, No. 225 · 13 October 2026](https://thepattern.media/editions/2026-10-13.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 14 October 2026**
 <!-- STAMP:END -->
