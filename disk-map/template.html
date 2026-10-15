@@ -1,0 +1,489 @@
+<title>Disk Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: summary strip on top, treemap explorer left, cleanup list right (stacks on phones). */
+:root {
+  --bg: #f6f6f8; --panel: #ffffff; --fg: #1b1b22; --muted: #6e6e7a; --faint: #a3a3ae;
+  --line: #e6e6ec; --hover: #f1f1f5; --ink: #16161c; --ink-fg: #ffffff;
+  --safe: #2f9a4f; --safe-bg: #e5f5e9; --review: #c27a14; --review-bg: #fbf0dc;
+  --c-media-bg: #fdebdc; --c-media: #e38a4a;
+  --c-other-bg: #ececf0; --c-other: #9b9ba8;
+  --c-code-bg: #e7e6fb; --c-code: #7d76e0;
+  --c-sdk-bg: #e1f0f8; --c-sdk: #4a9fcb;
+  --c-ai-bg: #fbe2ec; --c-ai: #d9608e;
+  --c-pkg-bg: #e0e7fb; --c-pkg: #4f6fd8;
+  --display: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111114; --panel: #19191e; --fg: #ececf1; --muted: #9a9aa8; --faint: #6a6a76;
+  --line: #2a2a31; --hover: #22222a; --ink: #ececf1; --ink-fg: #111114;
+  --safe: #5cc97a; --safe-bg: #17301f; --review: #e3a548; --review-bg: #33270f;
+  --c-media-bg: #3a2618; --c-media: #e8955a; --c-other-bg: #26262d; --c-other: #85858f;
+  --c-code-bg: #262447; --c-code: #9a94f0; --c-sdk-bg: #17303d; --c-sdk: #62b4dd;
+  --c-ai-bg: #3a1c29; --c-ai: #e57aa2; --c-pkg-bg: #1c2645; --c-pkg: #7590ea;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111114; --panel: #19191e; --fg: #ececf1; --muted: #9a9aa8; --faint: #6a6a76;
+  --line: #2a2a31; --hover: #22222a; --ink: #ececf1; --ink-fg: #111114;
+  --safe: #5cc97a; --safe-bg: #17301f; --review: #e3a548; --review-bg: #33270f;
+  --c-media-bg: #3a2618; --c-media: #e8955a; --c-other-bg: #26262d; --c-other: #85858f;
+  --c-code-bg: #262447; --c-code: #9a94f0; --c-sdk-bg: #17303d; --c-sdk: #62b4dd;
+  --c-ai-bg: #3a1c29; --c-ai: #e57aa2; --c-pkg-bg: #1c2645; --c-pkg: #7590ea;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--fg); font-family: var(--display); font-size: 14px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 32px; }
+.wrap { max-width: 1320px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, input:focus-visible, .tile:focus-visible { outline: 2px solid var(--c-code); outline-offset: 2px; }
+
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.top h1 { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.top .meta { color: var(--muted); font-size: 12px; }
+.banner { background: var(--review-bg); color: var(--fg); border-radius: 10px; padding: 10px 14px; font-size: 13px; }
+.banner code { font-family: var(--mono); font-size: 12px; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat .lbl { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.stat .val { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+.stat .sub { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 4px; letter-spacing: 0; }
+.stat .sub.up { color: var(--safe); }
+.dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 14px; align-items: start; }
+.head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 14px 16px 12px; border-bottom: 1px solid var(--line); }
+.head h2 { margin: 0; font-size: 14px; font-weight: 600; }
+.head p { margin: 3px 0 0; font-size: 12px; color: var(--muted); }
+.seg { display: inline-flex; background: var(--hover); border-radius: 8px; padding: 3px; flex: none; }
+.seg button { border: 0; background: transparent; padding: 5px 11px; border-radius: 6px; font-size: 12px; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--panel); color: var(--fg); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+
+.crumbs { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 0; font-size: 12px; color: var(--muted); gap: 8px; }
+.crumbs nav { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
+.crumbs nav button { border: 0; background: none; padding: 0; color: var(--muted); }
+.crumbs nav button:hover { color: var(--fg); }
+.crumbs nav span:last-child button { color: var(--fg); }
+.map { position: relative; margin: 10px 16px 0; height: 600px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 12px 16px 14px; font-size: 11px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+
+.tile { position: absolute; border-radius: 7px; border: 1px solid var(--tc); background: var(--tb); overflow: hidden; transition: filter .12s; }
+.tile.click { cursor: pointer; }
+.tile.click:hover { filter: brightness(0.97) saturate(1.1); }
+.tile .tn { position: absolute; left: 8px; top: 6px; right: 8px; font-size: 11.5px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; justify-content: space-between; gap: 6px; }
+.tile .tn em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--muted); font-weight: 400; flex: none; }
+.tile .ts { position: absolute; left: 8px; bottom: 6px; font-family: var(--mono); font-size: 13px; font-weight: 500; white-space: nowrap; }
+.tile.big .ts { font-size: 18px; }
+.tile.child { border-radius: 5px; }
+.tile.child .tn { font-size: 10.5px; color: var(--muted); font-weight: 400; top: 4px; left: 6px; }
+.tile.child .ts { font-size: 12px; left: 6px; bottom: 4px; }
+.tile.tiny .tn, .tile.tiny .ts { display: none; }
+.tile.safe, .tile.review { background-image: repeating-linear-gradient(135deg, transparent 0 5px, var(--hc) 5px 6px); }
+.tile.safe { --hc: color-mix(in srgb, var(--safe) 40%, transparent); border-color: var(--safe); }
+.tile.review { --hc: color-mix(in srgb, var(--review) 40%, transparent); border-color: var(--review); }
+.cleanup .tile:not(.safe):not(.review):not(.holds) > .tn, .cleanup .tile:not(.safe):not(.review):not(.holds) > .ts { color: var(--faint); }
+.tile.flash { animation: flash 1.2s ease 2; }
+@keyframes flash { 50% { box-shadow: 0 0 0 3px var(--c-code); } }
+
+.recs { display: flex; flex-direction: column; position: sticky; top: env(safe-area-inset-top, 0px); max-height: calc(100vh - 24px); }
+.list { overflow-y: auto; flex: 1; min-height: 0; }
+.group { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px 6px; font-size: 11px; }
+.pill { padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 500; }
+.pill.safe { background: var(--safe-bg); color: var(--safe); }
+.pill.review { background: var(--review-bg); color: var(--review); }
+.group .num { color: var(--muted); }
+.item { border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto 22px; gap: 10px; align-items: center; padding: 11px 16px; }
+.row input { width: 16px; height: 16px; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.row .t { font-size: 13.5px; font-weight: 500; }
+.row .w { font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+.row .sz { font-family: var(--mono); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.row .chev { border: 0; background: none; color: var(--faint); padding: 2px; border-radius: 4px; transition: transform .15s; }
+.item.open .chev { transform: rotate(90deg); color: var(--fg); }
+.detail { padding: 0 16px 14px 48px; font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 8px; }
+.detail p { margin: 0; line-height: 1.5; }
+.parts { display: flex; flex-direction: column; gap: 2px; }
+.parts button { display: flex; justify-content: space-between; gap: 10px; border: 0; background: none; padding: 3px 6px; margin: 0 -6px; border-radius: 4px; text-align: left; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.parts button:hover { background: var(--hover); color: var(--fg); }
+.parts button span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.detail pre { margin: 0; font-family: var(--mono); font-size: 11px; background: var(--hover); padding: 8px 10px; border-radius: 6px; overflow-x: auto; color: var(--fg); }
+.foot { border-top: 1px solid var(--line); padding: 12px 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+.foot .sel { font-size: 12px; color: var(--muted); }
+.foot .sel b { color: var(--fg); font-family: var(--mono); font-weight: 600; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { border: 1px solid var(--line); background: var(--panel); padding: 7px 12px; border-radius: 7px; font-size: 12.5px; font-weight: 500; }
+.btn:hover { background: var(--hover); }
+.btn.dark { background: var(--ink); color: var(--ink-fg); border-color: var(--ink); }
+.btn.dark:hover { opacity: .9; }
+.scriptbox { display: flex; flex-direction: column; gap: 6px; }
+.scriptbox textarea { width: 100%; height: 180px; font-family: var(--mono); font-size: 11px; background: var(--hover); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 8px; resize: vertical; }
+.scriptbox small { color: var(--muted); font-size: 11.5px; line-height: 1.45; }
+.empty { padding: 24px 16px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 1000px) {
+  .main { grid-template-columns: minmax(0, 1fr); }
+  .recs { position: static; max-height: none; }
+}
+@media (max-width: 640px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(3) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .stat .val { font-size: 19px; }
+  .map { height: 440px; margin: 10px 10px 0; }
+  .head { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { .tile, .chev { transition: none; } .tile.flash { animation: none; outline: 2px solid var(--c-code); } }
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <h1>Disk Map</h1>
+    <div class="meta" id="meta"></div>
+  </div>
+  <div class="banner" id="banner" hidden>You're looking at sample data. To map your own Mac, run <code>python3 disk-map/diskmap.py</code> in Terminal. It scans your home folder and opens this page with your real numbers.</div>
+
+  <section class="panel stats" id="stats"></section>
+
+  <div class="main">
+    <section class="panel">
+      <div class="head">
+        <div><h2>Explorer</h2><p>Your home folder, sized by space used. Click a tile to open it.</p></div>
+        <div class="seg" role="group" aria-label="Colour tiles by">
+          <button id="mCat" aria-pressed="true">Category</button>
+          <button id="mClean" aria-pressed="false">Cleanup</button>
+        </div>
+      </div>
+      <div class="crumbs"><nav id="crumbs"></nav><span class="num" id="here"></span></div>
+      <div class="map" id="map"></div>
+      <div class="legend" id="legend"></div>
+    </section>
+
+    <aside class="panel recs">
+      <div class="head"><div><h2>Recommendations</h2><p>Select items to build a cleanup script.</p></div></div>
+      <div class="list" id="list"></div>
+      <div class="foot">
+        <div class="sel" id="sel"></div>
+        <div class="btns">
+          <button class="btn" id="selSafe">Select safe</button>
+          <button class="btn" id="selNone">Clear</button>
+          <button class="btn dark" id="copy">Copy script</button>
+        </div>
+        <div class="scriptbox" id="scriptbox" hidden>
+          <textarea id="script" readonly spellcheck="false" aria-label="Cleanup script"></textarea>
+          <small id="scriptMsg"></small>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const CATS = {
+  media: ["Documents & media", "--c-media"],
+  other: ["Dev tools & other", "--c-other"],
+  code:  ["Code projects", "--c-code"],
+  sdk:   ["iOS & Android SDKs", "--c-sdk"],
+  ai:    ["AI models", "--c-ai"],
+  pkg:   ["Package caches", "--c-pkg"],
+};
+// Path prefixes (relative to home) that set a folder's category. Children inherit unless they match their own.
+const CAT_RULES = [
+  ["ai", [".ollama", ".lmstudio", ".cache/huggingface", ".cache/lm-studio", "Library/Application Support/LM Studio"]],
+  ["sdk", ["Library/Android", ".android", "Library/Developer", ".gradle/caches/transforms"]],
+  ["pkg", [".npm", ".gradle", ".cache", "Library/Caches", ".pnpm-store", "Library/pnpm", ".yarn", ".cargo", ".rustup", ".m2", "go/pkg", ".bun", ".deno", ".cocoapods", ".nvm", ".pyenv", ".conda", "miniconda3", "anaconda3"]],
+  ["media", ["Documents", "Pictures", "Movies", "Music", "Downloads", "Library/Mobile Documents", "Library/Messages", "Library/Mail", "Library/Photos"]],
+  ["code", ["Developer", "Projects", "projects", "code", "Code", "src", "dev", "repos", "GitHub", "Sites", "workspace"]],
+];
+function catFor(path, node, parentCat) {
+  for (const [k, list] of CAT_RULES)
+    for (const p of list) if (path === p || path.startsWith(p + "/")) return k;
+  if (node.p) return "code";
+  return parentCat || "other";
+}
+
+/* ---------- sample data (shown when the page has no scan embedded) ---------- */
+function demo() {
+  const G = 1e9, M = 1e6;
+  const n = (name, s, c, extra) => Object.assign({ n: name, s: c ? c.reduce((a, b) => a + b.s, 0) + (s || 0) : s }, c ? { c } : {}, extra || {});
+  const proj = (name, parts) => n(name, 0, parts.map(([a, b]) => n(a, b)), { p: 1 });
+  const tree = n("~", 0, [
+    n("Desktop", 0, [
+      proj("atlas", [["node_modules", 4.1*G], [".next", 6.2*G], [".turbo", 1.4*G], [".claude", 0], ["src", 0.3*G], [".git", 1.6*G]]),
+      proj("pebble", [["node_modules", 2.4*G], [".next", 3.6*G], ["src", 0.6*G], [".git", 1.6*G]]),
+      proj("orbit", [["node_modules", 2.1*G], [".turbo", 1.1*G], ["src", 0.6*G]]),
+      proj("side-quest", [["node_modules", 2.9*G], ["public", 1.3*G]]),
+      proj("old-saas", [["node_modules", 2.2*G], ["src", 0.6*G]]),
+      proj("sandbox", [["node_modules", 1.5*G], ["notebooks", 0.9*G]]),
+      n("Screenshots", 0.9*G), n("misc", 0.6*G), n("14 smaller items", 1.3*G, null, { x: 1 }),
+    ]),
+    n(".ollama", 0, [n("models", 0, [n("deepseek-coder:6.7b", 8.3*G), n("llama3.1:8b", 4.6*G), n("mistral:7b-instruct", 3.8*G)])]),
+    n(".npm", 0, [n("_cacache", 13.3*G), n("_logs", 0.1*G)]),
+    n("Library", 0, [
+      n("Android", 0, [n("sdk", 9.9*G)]),
+      n("Developer", 0, [n("Xcode", 0, [n("DerivedData", 6.4*G), n("Archives", 0.1*G)])]),
+      n("Caches", 0.4*G), n("Application Support", 0.3*G),
+    ]),
+    n(".android", 0, [n("avd", 0, [n("Pixel_7_API_34.avd", 4.6*G), n("Pixel_Tablet.avd", 2.7*G)])]),
+    n(".gradle", 0, [n("caches", 6.6*G)]),
+    n("Documents", 0, [n("Contracts", 2.1*G), n("Invoices", 1.2*G), n("Scans", 1.6*G), n("Notes", 0.6*G)]),
+    n("Pictures", 0, [n("Photos Library.photoslibrary", 4.8*G)]),
+    n("Downloads", 0, [n("ubuntu-24.04-desktop.iso", 5.9*G), n("Figma-backup.zip", 1.2*G), n("old-installers", 0.9*G)]),
+    n(".vscode", 0, [n("extensions", 3.6*G)]),
+    n(".cursor", 0, [n("extensions", 2.2*G)]),
+    n(".cache", 0, [n("uv", 1.8*G), n("puppeteer", 1.2*G)]),
+    n("Music", 0, [n("Music", 2.7*G)]),
+    n(".minikube", 1.4*G),
+    n("Other dotfiles", 2.4*G, null, { x: 1 }),
+  ]);
+  tree.c[0].c[0].c[3] = n(".claude", 0, [n("worktrees", 0, [n("fix-auth", 3.1*G), n("redesign", 3.4*G), n("perf-pass", 2.5*G)])]);
+  tree.c[0].c[0].s = tree.c[0].c[0].c.reduce((a, b) => a + b.s, 0);
+  const sum = (x) => { if (x.c) x.s = x.c.reduce((a, b) => a + sum(b), 0); return x.s; };
+  sum(tree);
+  const items = [
+    { id: "npm", title: "npm cache", safety: "safe", paths: [[".npm", 13.4*G]], note: "Packages npm downloaded once. It fetches them again when a project needs them." },
+    { id: "build", title: "Next.js & Turbo build output", safety: "safe", where: "~/Desktop/*/.next, .turbo", paths: [["Desktop/atlas/.next", 6.2*G], ["Desktop/pebble/.next", 3.6*G], ["Desktop/atlas/.turbo", 1.4*G], ["Desktop/orbit/.turbo", 1.1*G]], note: "Rebuilt automatically the next time you run dev or build." },
+    { id: "gradle", title: "Gradle caches", safety: "safe", paths: [[".gradle/caches", 6.6*G]], note: "Downloaded Gradle dependencies and build cache. Re-downloaded on the next Android build." },
+    { id: "deriveddata", title: "Xcode DerivedData", safety: "safe", paths: [["Library/Developer/Xcode/DerivedData", 6.4*G]], note: "Xcode's build products and indexes. Xcode rebuilds them. Quit Xcode first." },
+    { id: "toolcache", title: "uv & Puppeteer caches", safety: "safe", where: "~/.cache/uv, ~/.cache/puppeteer", paths: [[".cache/uv", 1.8*G], [".cache/puppeteer", 1.2*G]], note: "Python packages and headless browsers. Downloaded again on demand." },
+    { id: "android", title: "Android SDK & emulators", safety: "review", where: "~/Library/Android, ~/.android", paths: [["Library/Android/sdk", 9.9*G], [".android/avd/Pixel_7_API_34.avd", 4.6*G], [".android/avd/Pixel_Tablet.avd", 2.7*G]], note: "Only remove if you no longer build Android apps. Android Studio can reinstall it." },
+    { id: "ollama", title: "Ollama models", safety: "review", where: "~/.ollama/models", paths: [[".ollama/models", 16.7*G]], parts: [["deepseek-coder:6.7b", 8.3*G], ["llama3.1:8b", 4.6*G], ["mistral:7b-instruct", 3.8*G]], cmd: ["ollama rm deepseek-coder:6.7b", "ollama rm llama3.1:8b", "ollama rm mistral:7b-instruct"], note: "Local AI models. Remove the ones you don't use; pull them again later if needed." },
+    { id: "worktrees", title: "Claude Code worktrees", safety: "review", where: "~/Desktop/atlas/.claude/worktrees", paths: [["Desktop/atlas/.claude/worktrees", 9.0*G]], note: "Extra copies of a repo made for parallel agent work. Check nothing unmerged is left in them.", cmd: ['rm -rf "$HOME/Desktop/atlas/.claude/worktrees"', 'git -C "$HOME/Desktop/atlas" worktree prune'] },
+    { id: "nodemods", title: "node_modules in idle projects", safety: "review", where: "4 projects untouched for 30+ days", paths: [["Desktop/side-quest/node_modules", 2.9*G], ["Desktop/old-saas/node_modules", 2.2*G], ["Desktop/sandbox/node_modules", 1.5*G]], note: "Run npm install in a project to bring them back." },
+    { id: "downloads", title: "Large old downloads", safety: "review", where: "~/Downloads, 90+ days old", paths: [["Downloads/ubuntu-24.04-desktop.iso", 5.9*G], ["Downloads/Figma-backup.zip", 1.2*G]], note: "Files over 100 MB you haven't opened in 90 days." },
+  ].map(it => ({ ...it, paths: it.paths.map(([p, s]) => ({ p, s })), parts: it.parts && it.parts.map(([p, s]) => ({ p, s })) }));
+  items.forEach(it => it.size = it.paths.reduce((a, b) => a + b.s, 0));
+  return { demo: true, home: "/Users/you", scannedAt: new Date().toISOString(), disk: { total: 494*G, free: 39.5*G, used: 454.5*G }, tree, items };
+}
+
+const data = DATA || demo();
+const $ = (id) => document.getElementById(id);
+const fmt = (b) => {
+  if (b >= 1e9) return (b / 1e9).toFixed(b >= 100e9 ? 0 : 1) + " GB";
+  if (b >= 1e6) return Math.round(b / 1e6) + " MB";
+  return Math.max(0, Math.round(b / 1e3)) + " KB";
+};
+const tilde = (p) => "~/" + p;
+const shq = (p) => '"$HOME/' + p.replace(/(["\\$`])/g, "\\$1") + '"';
+
+/* ---------- prepare tree ---------- */
+(function prep(node, path, parentCat, parent) {
+  node.path = path; node.parent = parent;
+  node.k = path ? catFor(path, node, parentCat) : "other";
+  (node.c || []).forEach(ch => prep(ch, path ? path + "/" + ch.n : ch.n, node.k, node));
+})(data.tree, "", null, null);
+// Lumped "N smaller items" tiles carry no real path.
+const byPath = new Map();
+(function idx(n) { if (!n.x) byPath.set(n.path, n); (n.c || []).forEach(idx); })(data.tree);
+
+// Which cleanup item covers a path (exact or ancestor), and which folders contain cleanup items.
+const cover = new Map(), holds = new Set();
+data.items.forEach(it => it.paths.forEach(({ p }) => {
+  cover.set(p, it);
+  let parts = p.split("/"); parts.pop();
+  while (parts.length) { holds.add(parts.join("/")); parts.pop(); }
+}));
+function coveredBy(path) {
+  if (!path) return null;
+  let p = path;
+  while (p) { if (cover.has(p)) return cover.get(p); const i = p.lastIndexOf("/"); p = i < 0 ? "" : p.slice(0, i); }
+  return null;
+}
+
+/* ---------- state ---------- */
+const selected = new Set(data.items.filter(i => i.safety === "safe").map(i => i.id));
+let mode = "cat", current = data.tree;
+try { if (localStorage.getItem("diskmap.mode") === "clean") mode = "clean"; } catch (e) {}
+
+/* ---------- header stats ---------- */
+function renderStats() {
+  const safe = data.items.filter(i => i.safety === "safe"), review = data.items.filter(i => i.safety === "review");
+  const sum = (a) => a.reduce((x, i) => x + i.size, 0);
+  const sel = sum(data.items.filter(i => selected.has(i.id)));
+  const notScanned = Math.max(0, data.disk.used - data.tree.s);
+  $("stats").innerHTML = `
+    <div class="stat"><div class="lbl">Free after cleanup</div><div class="val num">${fmt(data.disk.free + sel)}<span class="sub up">+${fmt(sel)}</span></div></div>
+    <div class="stat"><div class="lbl"><i class="dot" style="background:var(--safe)"></i>Safe to remove</div><div class="val num">${fmt(sum(safe))}<span class="sub">${safe.length} items</span></div></div>
+    <div class="stat"><div class="lbl"><i class="dot" style="background:var(--review)"></i>Needs review</div><div class="val num">${fmt(sum(review))}<span class="sub">${review.length} items</span></div></div>
+    <div class="stat"><div class="lbl">Not scanned</div><div class="val num">${fmt(notScanned)}<span class="sub">system &amp; apps</span></div></div>`;
+  const when = new Date(data.scannedAt);
+  $("meta").textContent = `${data.demo ? "Sample" : data.home} · ${fmt(data.disk.free)} free of ${fmt(data.disk.total)} · scanned ${when.toLocaleDateString(undefined, { day: "numeric", month: "short" })} ${when.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })}`;
+  $("banner").hidden = !data.demo;
+}
+
+/* ---------- treemap ---------- */
+function squarify(nodes, x, y, w, h) {
+  const items = nodes.filter(n => n.s > 0).sort((a, b) => b.s - a.s);
+  const total = items.reduce((a, b) => a + b.s, 0), out = [];
+  if (!total || w <= 0 || h <= 0) return out;
+  const scale = (w * h) / total;
+  const worst = (row, side) => {
+    const s = row.reduce((a, b) => a + b.s * scale, 0);
+    const mx = Math.max(...row.map(r => r.s * scale)), mn = Math.min(...row.map(r => r.s * scale));
+    return Math.max((side * side * mx) / (s * s), (s * s) / (side * side * mn));
+  };
+  let rest = items;
+  while (rest.length) {
+    const side = Math.min(w, h);
+    let row = [rest[0]], i = 1, best = worst(row, side);
+    while (i < rest.length) { const r = worst(row.concat(rest[i]), side); if (r > best) break; row.push(rest[i]); best = r; i++; }
+    rest = rest.slice(i);
+    const area = row.reduce((a, b) => a + b.s * scale, 0);
+    if (w >= h) { const rw = area / h; let yy = y; row.forEach(n => { const ih = (n.s * scale) / rw; out.push({ n, x, y: yy, w: rw, h: ih }); yy += ih; }); x += rw; w -= rw; }
+    else { const rh = area / w; let xx = x; row.forEach(n => { const iw = (n.s * scale) / rh; out.push({ n, x: xx, y, w: iw, h: rh }); xx += iw; }); y += rh; h -= rh; }
+  }
+  return out;
+}
+
+function tileEl(n, r, cls) {
+  const el = document.createElement("div");
+  const it = coveredBy(n.path);
+  el.className = "tile " + cls + (it ? " " + it.safety : "") + (!it && holds.has(n.path) ? " holds" : "");
+  const v = CATS[n.k][1], mix = cls === "child" ? 35 : 45;
+  let tb = `var(${v}-bg)`, tc = `color-mix(in srgb, var(${v}) ${mix}%, transparent)`;
+  if (mode === "clean") {
+    if (it) { tb = `var(--${it.safety}-bg)`; tc = `var(--${it.safety})`; }
+    else if (holds.has(n.path)) { tb = "var(--panel)"; tc = "var(--line)"; }
+    else { tb = "var(--c-other-bg)"; tc = "var(--line)"; }
+  }
+  el.style.cssText = `left:${r.x}px;top:${r.y}px;width:${r.w}px;height:${r.h}px;--tb:${tb};--tc:${tc}`;
+  el.title = `${n.x ? n.n : tilde(n.path)}\n${fmt(n.s)}${it ? "\n" + (it.safety === "safe" ? "Safe to remove" : "Needs review") + ": " + it.title : ""}`;
+  if (r.w < 34 || r.h < 26) el.classList.add("tiny");
+  if (n.c && n.c.length && !n.x) {
+    el.classList.add("click"); el.tabIndex = 0; el.setAttribute("role", "button");
+    el.setAttribute("aria-label", `Open ${n.n}, ${fmt(n.s)}`);
+    const go = (e) => { e.stopPropagation(); open(n); };
+    el.addEventListener("click", go);
+    el.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(e); } });
+  }
+  return el;
+}
+
+function render() {
+  const map = $("map"); map.innerHTML = "";
+  map.classList.toggle("cleanup", mode === "clean");
+  const W = map.clientWidth, H = map.clientHeight, GAP = 4;
+  const kids = (current.c && current.c.length) ? current.c : [current];
+  squarify(kids, 0, 0, W, H).forEach(r => {
+    const n = r.n, box = { x: r.x + GAP / 2, y: r.y + GAP / 2, w: r.w - GAP, h: r.h - GAP };
+    if (box.w <= 0 || box.h <= 0) return;
+    const el = tileEl(n, box, box.w > 220 && box.h > 160 ? "big" : "");
+    const nested = n.c && n.c.length && box.w > 110 && box.h > 90;
+    el.innerHTML = `<div class="tn"><span>${esc(n.n)}</span>${nested ? `<em>${fmt(n.s)}</em>` : ""}</div>` + (nested || box.h < 48 ? "" : `<div class="ts">${fmt(n.s)}</div>`);
+    if (nested) {
+      squarify(n.c, 6, 26, box.w - 12, box.h - 32).forEach(cr => {
+        const cb = { x: cr.x + 1.5, y: cr.y + 1.5, w: cr.w - 3, h: cr.h - 3 };
+        if (cb.w <= 0 || cb.h <= 0) return;
+        const ce = tileEl(cr.n, cb, "child");
+        const showSize = cb.h > 44 && cb.w > 52;
+        ce.innerHTML = `<div class="tn"><span>${esc(cr.n.n)}</span></div>` + (showSize ? `<div class="ts">${fmt(cr.n.s)}</div>` : "");
+        el.appendChild(ce);
+      });
+    }
+    map.appendChild(el);
+  });
+  // breadcrumbs
+  const chain = []; for (let n = current; n; n = n.parent) chain.unshift(n);
+  $("crumbs").innerHTML = chain.map((n, i) => `<span>${i ? "/ " : ""}<button data-p="${esc(n.path)}">${i ? esc(n.n) : "~ Home"}</button></span>`).join(" ");
+  $("crumbs").querySelectorAll("button").forEach(b => b.onclick = () => open(b.dataset.p ? byPath.get(b.dataset.p) : data.tree));
+  $("here").textContent = fmt(current.s);
+  $("mCat").setAttribute("aria-pressed", mode === "cat");
+  $("mClean").setAttribute("aria-pressed", mode === "clean");
+  $("legend").innerHTML = mode === "cat"
+    ? Object.values(CATS).map(([l, v]) => `<span><i style="background:var(${v})"></i>${l}</span>`).join("")
+    : `<span><i style="background:var(--safe)"></i>Safe to remove</span><span><i style="background:var(--review)"></i>Needs review</span><span><i style="background:var(--c-other-bg);border:1px solid var(--line)"></i>Keep</span>`;
+}
+function open(n) { if (n) { current = n; render(); } }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]); }
+
+function reveal(path) {
+  let node = byPath.get(path);
+  if (!node) { // deepest known ancestor
+    let p = path; while (p && !byPath.has(p)) { const i = p.lastIndexOf("/"); p = i < 0 ? "" : p.slice(0, i); }
+    node = p ? byPath.get(p) : data.tree;
+  }
+  open(node.parent || data.tree);
+  const el = [...$("map").querySelectorAll(".tile")].find(t => t.title.startsWith(tilde(node.path) + "\n"));
+  if (el) { el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 2600); }
+  $("map").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+/* ---------- recommendations ---------- */
+const openItems = new Set();
+function renderList() {
+  const groups = [["safe", "Safe to remove"], ["review", "Review first"]];
+  let html = "";
+  for (const [key, label] of groups) {
+    const list = data.items.filter(i => i.safety === key).sort((a, b) => b.size - a.size);
+    if (!list.length) continue;
+    html += `<div class="group"><span class="pill ${key}">${label}</span><span class="num">${fmt(list.reduce((a, b) => a + b.size, 0))}</span></div>`;
+    for (const it of list) {
+      const where = it.where || it.paths.map(p => tilde(p.p)).join(", ");
+      const parts = it.parts || it.paths;
+      html += `<div class="item${openItems.has(it.id) ? " open" : ""}" data-id="${it.id}">
+        <div class="row">
+          <input type="checkbox" id="chk-${it.id}" ${selected.has(it.id) ? "checked" : ""} aria-label="Include ${esc(it.title)}">
+          <label for="chk-${it.id}" style="min-width:0;cursor:pointer"><div class="t">${esc(it.title)}</div><div class="w">${esc(where)}</div></label>
+          <span class="sz">${fmt(it.size)}</span>
+          <button class="chev" aria-expanded="${openItems.has(it.id)}" aria-label="Details for ${esc(it.title)}"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+        ${openItems.has(it.id) ? `<div class="detail">
+          <p>${esc(it.note || "")}</p>
+          <div class="parts">${parts.map(p => `<button data-reveal="${esc(it.parts ? it.paths[0].p : p.p)}"><span>${esc(it.parts ? p.p : tilde(p.p))}</span><span class="num">${fmt(p.s)}</span></button>`).join("")}</div>
+          <pre>${esc(commands(it).join("\n"))}</pre>
+        </div>` : ""}
+      </div>`;
+    }
+  }
+  $("list").innerHTML = html || `<div class="empty">Nothing obvious to clean. Your disk is in good shape.</div>`;
+  $("list").querySelectorAll(".item").forEach(el => {
+    const id = el.dataset.id;
+    el.querySelector("input").onchange = (e) => { e.target.checked ? selected.add(id) : selected.delete(id); update(); };
+    el.querySelector(".chev").onclick = () => { openItems.has(id) ? openItems.delete(id) : openItems.add(id); renderList(); };
+    el.querySelectorAll("[data-reveal]").forEach(b => b.onclick = () => reveal(b.dataset.reveal));
+  });
+  const chosen = data.items.filter(i => selected.has(i.id));
+  $("sel").innerHTML = `<b>${fmt(chosen.reduce((a, b) => a + b.size, 0))}</b> selected · ${chosen.length} item${chosen.length === 1 ? "" : "s"}`;
+}
+function commands(it) { return it.cmd || it.paths.map(p => `rm -rf ${shq(p.p)}`); }
+
+function buildScript() {
+  const chosen = data.items.filter(i => selected.has(i.id));
+  const total = chosen.reduce((a, b) => a + b.size, 0);
+  const lines = ["#!/bin/bash", `# Disk Map cleanup script, made ${new Date().toLocaleString()}`, `# Frees about ${fmt(total)}. Read it before you run it.`, "# Run with: pbpaste | bash", "set -u", ""];
+  for (const it of chosen) lines.push(`echo "Removing ${it.title.replace(/"/g, "")} (${fmt(it.size)})"`, ...commands(it), "");
+  lines.push('echo "Done."');
+  return lines.join("\n");
+}
+
+function update() { renderStats(); renderList(); if ($("scriptbox").hidden === false) $("script").value = buildScript(); }
+
+$("mCat").onclick = () => { mode = "cat"; try { localStorage.setItem("diskmap.mode", mode); } catch (e) {} render(); };
+$("mClean").onclick = () => { mode = "clean"; try { localStorage.setItem("diskmap.mode", mode); } catch (e) {} render(); };
+$("selSafe").onclick = () => { selected.clear(); data.items.filter(i => i.safety === "safe").forEach(i => selected.add(i.id)); update(); };
+$("selNone").onclick = () => { selected.clear(); update(); };
+$("copy").onclick = () => {
+  const text = buildScript(), box = $("scriptbox"), ta = $("script");
+  box.hidden = false; ta.value = text;
+  const n = data.items.filter(i => selected.has(i.id)).length;
+  if (!n) { $("scriptMsg").textContent = "Select at least one item first."; return; }
+  const done = () => { $("scriptMsg").textContent = "Copied. In Terminal, run: pbpaste | bash"; $("copy").textContent = "Copied"; setTimeout(() => $("copy").textContent = "Copy script", 1600); };
+  const fallback = () => { ta.focus(); ta.select(); $("scriptMsg").textContent = "Couldn't copy automatically. The script is selected; press ⌘C."; };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+};
+
+renderStats(); renderList(); render();
+new ResizeObserver(() => render()).observe($("map"));
+</script>
