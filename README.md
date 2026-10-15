@@ -12,9 +12,9 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 🔨 **Building this week:** shipping [The Pattern](https://thepattern.media) every morning and teaching this very profile to update itself.
 
 <!-- PATTERN:START -->
-> 📡 **Today's culture signal** · Pulse 72/100
-> *Luxury found its new home east, and Kim Jones made it official* Kim Jones debuts in Hong Kong, not Paris. Hollywood turns on the tech founder. Nvidia loses China. The geography of cultural authority is being redrawn. #ThePattern
-> → [The Pattern, No. 225 · 13 October 2026](https://thepattern.media/editions/2026-10-13.html)
+> 📡 **Today's culture signal** · Pulse 74/100
+> *LVMH's 5% sales drop signals the end of post-pandemic luxury auto-pilot* LVMH down 5%. Kim Jones goes independent. Kering heads to India. The conglomerate model is losing its pull on both sales and talent. @ThePattern
+> → [The Pattern, No. 226 · 14 October 2026](https://thepattern.media/editions/2026-10-14.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 14 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 15 October 2026**
 <!-- STAMP:END -->
