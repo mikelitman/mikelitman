@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Chinese designers are maturing fast, and Western luxury has no answer yet.* Artists and designers whose work fills a brand's stage may find their names shrink beside the logo.
-> → [The Pattern, No. 232 · 22 October 2026](https://thepattern.media/editions/2026-10-22.html)
+> *Riot insurance is now a line item in luxury's Paris budget.* In-house design teams may lose ground when fans, artists and football clubs supply the concepts.
+> → [The Pattern, No. 233 · 23 October 2026](https://thepattern.media/editions/2026-10-23.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 23 October 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 24 October 2026**
 <!-- STAMP:END -->
