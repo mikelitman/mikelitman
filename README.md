@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Palace opens its London flagship with a shop-only Burberry capsule* Labels that only trade online lose the thrill of the hunt, and distant fans end up paying resellers.
-> → [The Pattern, No. 242 · 5 November 2026](https://thepattern.media/editions/2026-11-05.html)
+> *Kering reportedly taps London designer Martine Rose to lead Balenciaga* Labels selling on vague mood rather than a real artefact will look thin beside rivals with something to point to.
+> → [The Pattern, No. 243 · 6 November 2026](https://thepattern.media/editions/2026-11-06.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 6 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 7 November 2026**
 <!-- STAMP:END -->
