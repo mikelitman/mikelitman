@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Kering reportedly taps London designer Martine Rose to lead Balenciaga* Kering reportedly taps London designer Martine Rose to lead Balenciaga. Pierpaolo Piccioli is stepping down as creative director of Balenciaga after less than two years in the role.
-> → [The Pattern, No. 243 · 6 November 2026](https://thepattern.media/editions/2026-11-06.html)
+> *Soho House brings its London club spirit to Tokyo's Aoyama* Soho House brings its London club spirit to Tokyo's Aoyama. Soho House, the London-born private members' club, has opened in the heart of Tokyo's Aoyama, in a project six years in the making.
+> → [The Pattern, No. 244 · 9 November 2026](https://thepattern.media/editions/2026-11-09.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 9 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 10 November 2026**
 <!-- STAMP:END -->
