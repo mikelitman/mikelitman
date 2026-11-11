@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Soho House brings its London club spirit to Tokyo's Aoyama* Soho House brings its London club spirit to Tokyo's Aoyama. Soho House, the London-born private members' club, has opened in the heart of Tokyo's Aoyama, in a project six years in the making.
-> → [The Pattern, No. 244 · 9 November 2026](https://thepattern.media/editions/2026-11-09.html)
+> *London's Design Museum gives 16 Black designers a major stage* London's Design Museum gives 16 Black designers a major stage. Charlene Prempeh, the author and journalist, has guest-curated The Nue Black Aesthetic at London's Design Museum.
+> → [The Pattern, No. 245 · 10 November 2026](https://thepattern.media/editions/2026-11-10.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 10 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 11 November 2026**
 <!-- STAMP:END -->
