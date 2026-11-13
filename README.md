@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Balenciaga gives its Le City bag a 25th birthday campaign worldwide* Balenciaga gives its Le City bag a 25th birthday campaign worldwide. A quarter of a century on, Balenciaga is giving its slouchy, studded Le City bag a chaptered campaign and an artist collaboration.
-> → [The Pattern, No. 246 · 11 November 2026](https://thepattern.media/editions/2026-11-11.html)
+> *Maserati's Italian design could help Maextro take on BMW and Mercedes* Maserati's Italian design could help Maextro take on BMW and Mercedes. A Chinese luxury EV brand, Maextro, backed by Huawei Technologies, is moving closer to a tie-up with Maserati, say industry sources.
+> → [The Pattern, No. 247 · 12 November 2026](https://thepattern.media/editions/2026-11-12.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 12 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 November 2026**
 <!-- STAMP:END -->
