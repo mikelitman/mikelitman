@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Maserati's Italian design could help Maextro take on BMW and Mercedes* Maserati's Italian design could help Maextro take on BMW and Mercedes. A Chinese luxury EV brand, Maextro, backed by Huawei Technologies, is moving closer to a tie-up with Maserati, say industry sources.
-> → [The Pattern, No. 247 · 12 November 2026](https://thepattern.media/editions/2026-11-12.html)
+> *Apple's Christmas ad celebrates a boy who keeps on drawing* Apple's Christmas ad celebrates a boy who keeps on drawing. Apple's 2026 Christmas ad, 'The Dreamer', is a four-minute film directed by Melina Matsoukas and set to 'Give Me a Dream'.
+> → [The Pattern, No. 248 · 13 November 2026](https://thepattern.media/editions/2026-11-13.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 13 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 14 November 2026**
 <!-- STAMP:END -->
