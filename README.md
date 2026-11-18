@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Hustlr turns a Cheras food court into a pickleball club* Hustlr turns a Cheras food court into a pickleball club. An abandoned food court in Taman Taynton View, Cheras, has become Hustlr Pickleball & Social Club.
-> → [The Pattern, No. 249 · 16 November 2026](https://thepattern.media/editions/2026-11-16.html)
+> *Hybe and CAA join forces on brand deals, sport and live shows* Hybe and CAA join forces on brand deals, sport and live shows. Hybe, the music company Variety calls a lifestyle platform, has launched a strategic partnership with Creative Artists Agency.
+> → [The Pattern, No. 250 · 17 November 2026](https://thepattern.media/editions/2026-11-17.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 17 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 18 November 2026**
 <!-- STAMP:END -->
