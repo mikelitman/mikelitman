@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *YouTube hosts Hollywood showcase for new titles from Emma Chamberlain and Sabalenka* YouTube hosts Hollywood showcase for new titles from Emma Chamberlain and Sabalenka. Creator content got a network TV-style launch on Tuesday evening at the Hollywood Roosevelt hotel.
-> → [The Pattern, No. 251 · 18 November 2026](https://thepattern.media/editions/2026-11-18.html)
+> *sacai brings its SS27 runway show to Hong Kong's HSBC building* sacai brings its SS27 runway show to Hong Kong's HSBC building. sacai, fresh from its Paris Fashion Week presentations earlier this year, will stage its Spring/Summer 2027 runway show in Hong Kong this December.
+> → [The Pattern, No. 252 · 19 November 2026](https://thepattern.media/editions/2026-11-19.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 19 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 20 November 2026**
 <!-- STAMP:END -->
