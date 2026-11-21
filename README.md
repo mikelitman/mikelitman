@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *sacai brings its SS27 runway show to Hong Kong's HSBC building* sacai brings its SS27 runway show to Hong Kong's HSBC building. sacai, fresh from its Paris Fashion Week presentations earlier this year, will stage its Spring/Summer 2027 runway show in Hong Kong this December.
-> → [The Pattern, No. 252 · 19 November 2026](https://thepattern.media/editions/2026-11-19.html)
+> *Sally Hansen's feature film gains director Andy Vallentine* Sally Hansen's feature film gains director Andy Vallentine. Tyra Banks' Smize Productions has hired Andy Vallentine, director of The Mattachine Family, to make its Sally Hansen feature film.
+> → [The Pattern, No. 253 · 20 November 2026](https://thepattern.media/editions/2026-11-20.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 20 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 21 November 2026**
 <!-- STAMP:END -->
