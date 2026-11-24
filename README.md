@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Sally Hansen's feature film gains director Andy Vallentine* Sally Hansen's feature film gains director Andy Vallentine. Tyra Banks' Smize Productions has hired Andy Vallentine, director of The Mattachine Family, to make its Sally Hansen feature film.
-> → [The Pattern, No. 253 · 20 November 2026](https://thepattern.media/editions/2026-11-20.html)
+> *BAPE opens a two-floor Paris flagship on rue Saint-Honouré* BAPE opens a two-floor Paris flagship on rue Saint-Honouré. Streetwear has taken a room on one of Paris's grandest shopping streets.
+> → [The Pattern, No. 254 · 23 November 2026](https://thepattern.media/editions/2026-11-23.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 23 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 24 November 2026**
 <!-- STAMP:END -->
