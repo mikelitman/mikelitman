@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Amazon opens a discovery route for prestige beauty brands* Amazon opens a discovery route for prestige beauty brands. Amazon Beauty has taken a sponsored slot on Glossy, the beauty trade site, to pitch Amazon as a place where prestige beauty and wellness brands get discovered.
-> → [The Pattern, No. 255 · 24 November 2026](https://thepattern.media/editions/2026-11-24.html)
+> *Burberry builds the V&A Christmas tree from biscuit tins and brasses* Burberry builds the V&A Christmas tree from biscuit tins and brasses. This year's Christmas tree at the Victoria and Albert Museum comes from Burberry's chief creative officer, Daniel Lee, working with the artist Ann Carrington.
+> → [The Pattern, No. 256 · 25 November 2026](https://thepattern.media/editions/2026-11-25.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 25 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 26 November 2026**
 <!-- STAMP:END -->
