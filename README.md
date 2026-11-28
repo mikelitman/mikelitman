@@ -13,8 +13,8 @@ I'm a **non-coder who builds**. After 15+ years in strategy and emerging tech (G
 
 <!-- PATTERN:START -->
 > 📡 **Today's culture signal** · Pulse ?/100
-> *Brands race to join Grand Theft Auto VI after launch* Brands race to join Grand Theft Auto VI after launch. Grand Theft Auto VI launched on 19 November, and brands rushed to get inside the biggest entertainment release in years.
-> → [The Pattern, No. 257 · 26 November 2026](https://thepattern.media/editions/2026-11-26.html)
+> *Visa gets a compact new logo and typeface from Base Design* Visa gets a compact new logo and typeface from Base Design. Base Design, the branding agency, has refreshed Visa's visual identity, pitching the work 'for the next generation'.
+> → [The Pattern, No. 258 · 27 November 2026](https://thepattern.media/editions/2026-11-27.html)
 <!-- PATTERN:END -->
 
 ---
@@ -104,5 +104,5 @@ I open-source the frameworks behind the work. The [**Taste OS** scoring spec](ht
 ---
 
 <!-- STAMP:START -->
-🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 27 November 2026**
+🤖 *This profile maintains itself. Every morning a GitHub Action pulls the live brief from The Pattern, refreshes each project's numbers, and lists my latest writing, then commits the change. Built and run by an agent. That's the whole point.* · **Last refresh: 28 November 2026**
 <!-- STAMP:END -->
